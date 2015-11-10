@@ -1,0 +1,6 @@
+@import "../../base/btn";
+.root {
+    composes: btn from "./base.scss";
+
+    background-color: $btn-default-bg;
+}

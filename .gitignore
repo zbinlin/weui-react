@@ -1,1 +1,6 @@
-node_modules/
+*.log
+*.cache
+/node_modules/
+/lib/
+/dist/
+/.haste_cache/

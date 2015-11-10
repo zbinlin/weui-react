@@ -2,22 +2,67 @@
   "name": "weui-react",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "./lib/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest",
+    "webpack": "webpack",
+    "clean": "./tools/clean.sh",
+    "build": "./tools/build.sh",
+    "build-lib": "npm run clean lib && npm run build",
+    "build-example": "npm run clean dist && npm run webpack && cp examples/index.html dist/",
+    "dist-example": "NODE_ENV=development npm run build-lib && npm run build-example",
+    "dist": "NODE_ENV=production npm run build-lib"
   },
   "keywords": [],
   "author": "",
   "license": "MIT",
   "devDependencies": {
+    "babel-cli": "^6.1.2",
     "babel-core": "^6.1.2",
+    "babel-jest": "^6.0.1",
+    "babel-loader": "^6.0.1",
     "babel-preset-es2015": "^6.1.2",
     "babel-preset-react": "^6.1.2",
     "babel-preset-stage-0": "^6.1.2",
+    "chai": "^3.4.1",
     "css-loader": "^0.22.0",
+    "css-modules-require-hook": "^2.0.2",
+    "del": "^2.0.2",
     "eslint-plugin-react": "^3.8.0",
+    "jest-cli": "^0.7.1",
+    "mocha": "^2.3.3",
     "node-sass": "^3.4.1",
+    "postcss-modules-extract-imports": "^1.0.0",
+    "postcss-modules-scope": "^1.0.0",
+    "react": "^0.14.2",
+    "react-addons-test-utils": "^0.14.2",
+    "react-dom": "^0.14.2",
+    "react-hot-loader": "^1.3.0",
     "sass-loader": "^3.1.1",
-    "webpack": "^1.12.3"
+    "style-loader": "^0.13.0",
+    "webpack": "^1.12.3",
+    "webpack-dev-server": "^1.12.1"
+  },
+  "jest": {
+    "scriptPreprocessor": "<rootDir>/tools/preprocessor.js",
+    "cacheDirectory": "<rootDir>/.haste_cache",
+    "testFileExtensions": [
+      "js",
+      "jsx"
+    ],
+    "moduleFileExtensions": [
+      "js",
+      "json",
+      "jsx"
+    ],
+    "unmockedModulePathPatterns": [
+      "<rootDir>/node_modules/react",
+      "<rootDir>/node_modules/react-dom",
+      "<rootDir>/node_modules/react-addons-test-utils",
+      "<rootDir>/node_modules/fbjs"
+    ],
+    "testPathDirs": [
+      "<rootDir>/src"
+    ]
   }
 }

@@ -1,0 +1,27 @@
+@mixin ellipsis($args...) {
+    $len: length($args);
+    @if $len == 1 {
+        @include ellipsis-normal($args...);
+    } @else if $len == 2 {
+        @include ellipsis-multi-line($args...);
+    }
+}
+
+@mixin ellipsis-normal($w: auto) {
+    @include ellipsis-common;
+
+    width: $w;
+    white-space: nowrap;
+    word-wrap: normal;
+}
+@mixin ellipsis-multi-line($type, $line) {
+    @include ellipsis-common;
+
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: $line;
+}
+@mixin ellipsis-common {
+    overflow: hidden;
+    text-overflow: ellipsis;
+}

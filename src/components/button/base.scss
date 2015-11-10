@@ -1,0 +1,40 @@
+@import "../../base/btn";
+
+.btn {
+    width: 100%;
+    border-width: 0;
+    outline: 0;
+    appearance: none;
+    &:focus {
+        outline: 0;
+    }
+
+    position: relative;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 14px;
+    padding-right: 14px;
+    box-sizing: border-box;
+    font-size: $btn-font-size;
+    text-align: center;
+    text-decoration: none;
+    color: $btn-font-color;
+    line-height: $btn-height / $btn-font-size;
+    border-radius: $btn-border-radius;
+    @include tap-color;
+    overflow: hidden;
+
+    &:after {
+        content: "";
+        width: 200%;
+        height: 200%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        transform-origin: 0 0;
+        transform: scale(0.5);
+        box-sizing: border-box;
+        border-radius: $btn-border-radius * 2;
+    }
+}

@@ -1,0 +1,9 @@
+.*
+*.log
+*.cache
+/example/
+/src/
+/dist/
+/test/
+/tools/
+/webpack.config.babel.js

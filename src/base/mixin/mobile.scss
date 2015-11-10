@@ -1,0 +1,17 @@
+// tapcolor
+@mixin tap-color($c: black) {
+    tap-highlight-color: $c;
+}
+
+//user action
+@mixin no-select {
+    -webkit-touch-callout: none;
+    user-select: none;
+}
+
+
+
+
+
+
+
