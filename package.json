@@ -1,17 +1,15 @@
 {
   "name": "weui-react",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "",
   "main": "./lib/index.js",
   "scripts": {
     "test": "jest",
     "webpack": "webpack",
-    "clean": "./tools/clean.sh",
-    "build": "./tools/build.sh",
-    "build-lib": "npm run clean lib && npm run build",
-    "build-example": "npm run clean dist && npm run webpack && cp examples/index.html dist/",
-    "dist-example": "NODE_ENV=development npm run build-lib && npm run build-example",
-    "dist": "NODE_ENV=production npm run build-lib"
+    "build-lib": "babel-node ./tools/build.js",
+    "build-example": "babel-node ./tools/build-example.js",
+    "develop": "npm run build-lib && npm run build-example",
+    "deploy": "NODE_ENV=production npm run build-lib && npm run build-example"
   },
   "keywords": [],
   "author": "",
