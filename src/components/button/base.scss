@@ -35,6 +35,12 @@
         transform-origin: 0 0;
         transform: scale(0.5);
         box-sizing: border-box;
+        border: 1px solid rgba(0, 0, 0, 0.2);
         border-radius: $btn-border-radius * 2;
     }
+
+}
+
+.disabled {
+    cursor: not-allowed;
 }

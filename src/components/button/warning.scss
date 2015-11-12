@@ -2,5 +2,19 @@
 .root {
     composes: btn from "./base.scss";
 
+    color: $btn-warning-font-color;
     background-color: $btn-warning-bg;
+
+    &:not(.disabled):visited {
+        color: $btn-warning-font-color;
+    }
+    &:not(.disabled):active {
+        color: $btn-warning-active-font-color;
+        background: $btn-warning-active-bg;
+    }
+}
+
+.disabled {
+    composes: disabled from "./base.scss";
+    color: $btn-warning-disabled-font-color;
 }

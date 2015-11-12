@@ -1,41 +1,30 @@
 "use strict";
 
-import React, { Component } from "react";
-import styles from "./index.scss";
+import React from "react";
 
-class Button extends Component {
-    render() {
-        let props = this.props;
-        let Btn = PrimaryButton;
-        let styl = styles.primary; // default
-        switch (props.is) {
-            case "primary-btn":
-                styl = styles.primary;
-                break;
-            case "warning-btn":
-                styl = styles.warning;
-                break;
-            case "default-btn":
-                styl = styles.default;
-                break;
-        }
-        return <a className={styl}>{props.children}</a>;
+import PrimaryButton from "./primary";
+import WarningButton from "./warning";
+import DefaultButton from "./default";
+
+export default props => {
+    let Button = null;
+    switch (props.is) {
+        case "primary-btn":
+            Button = PrimaryButton;
+            break;
+        case "warning-btn":
+            Button = WarningButton;
+            break;
+        case "default-btn":
+            Button = DefaultButton;
+            break;
+        default:
+            Button = PrimaryButton;
     }
-}
-Button.defaultProps = {
-    is: "primary-btn",
-    size: "medium",
-    state: "normal"
+    return <Button {...props} />;
 };
 
-
-let PrimaryButton = props => <Button {...props} is="primary-btn" />;
-let WarningButton = props => <Button {...props} is="warning-btn" />;
-let DefaultButton = props => <Button {...props} is="default-btn" />;
-
-
 export {
-    Button as default,
     PrimaryButton,
     WarningButton,
     DefaultButton
