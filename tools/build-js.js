@@ -5,12 +5,10 @@ import path from "path";
 import {transform} from "babel-core";
 import promising from "promise-adapter";
 import glob from "./lib/glob-promise";
-import copy from "./lib/copy";
 import mkdir from "mkdir-promise";
 import rename from "./lib/rename-js-import";
 
 const ENV = process.env.NODE_ENV;
-const PWD = process.cwd();
 const FILES = "src/**/*.js{,x}";
 const ROOT = "src";
 const IGNORE = ["**/__tests__/**"];

@@ -18,6 +18,16 @@
         "semi": [
             2,
             "always"
+        ],
+        "no-unused-vars": [
+            2,
+            {
+                "vars": "all",
+                "varsIgnorePattern": "React"
+            }
+        ],
+        "no-console": [
+            0
         ]
     },
     "env": {

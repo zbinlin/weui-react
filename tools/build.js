@@ -8,9 +8,13 @@ import css from "./build-css";
 import webpack from "./webpack.js";
 
 async function build() {
-    await run("Clean lib/", clean, "lib/**/*");
-    await run("Build JS", js);
-    await run("Build CSS", css);
+    try {
+        await run("Clean lib/", clean, "lib/**/*");
+        await run("Build JS", js);
+        await run("Build CSS", css);
+    } catch (ex) {
+        console.error(ex);
+    }
 }
 
 run(build);

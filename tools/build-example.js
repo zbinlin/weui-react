@@ -8,9 +8,13 @@ import css from "./build-css";
 import webpack from "./webpack.js";
 
 async function buildExample() {
-    await run("Clean dist/", clean, "dist/**/*");
-    await run("Copy", copy, "examples/index.html", "dist/", "examples");
-    await run("webpack", webpack);
+    try {
+        await run("Clean dist/", clean, "dist/**/*");
+        await run("Copy", copy, "examples/index.html", "dist/", "examples");
+        await run("webpack", webpack);
+    } catch (ex) {
+        console.error(ex);
+    }
 }
 
 run(buildExample);

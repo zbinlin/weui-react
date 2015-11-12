@@ -5,13 +5,11 @@ import path from "path";
 import sass from "node-sass";
 import promising from "promise-adapter";
 import glob from "./lib/glob-promise";
-import copy from "./lib/copy";
 import mkdir from "mkdir-promise";
 import postcss from "postcss";
 import rename from "./lib/rename-css-composes";
 
 const ENV = process.env.NODE_ENV;
-const PWD = process.cwd();
 const FILES = "src/components/**/*.{sa,sc,c}ss";
 const ROOT = "src";
 const IGNORE = ["**/__tests__/**"];
