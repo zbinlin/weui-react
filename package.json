@@ -9,7 +9,8 @@
     "build-lib": "babel-node ./tools/build.js",
     "build-example": "babel-node ./tools/build-example.js",
     "develop": "npm run build-lib && npm run build-example",
-    "deploy": "NODE_ENV=production npm run build-lib && npm run build-example"
+    "deploy": "NODE_ENV=production npm run build-lib && npm run build-example",
+    "serve": "babel-node ./tools/serve.js"
   },
   "keywords": [],
   "author": "",
