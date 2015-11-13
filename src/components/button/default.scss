@@ -1,20 +1,64 @@
 @import "../../base/btn";
+
+$font-color: $btn-default-font-color;
+$bg-color: $btn-default-bg-color;
+
+$active-font-color: $btn-default-active-font-color;
+$active-bg-color: $btn-default-active-bg-color;
+
+$disabled-font-color: $btn-default-disabled-font-color;
+$disabled-bg-color: $btn-default-disabled-bg-color;
+
+$outline-font-color: $btn-default-outline-font-color;
+$outline-bg-color: $btn-default-outline-bg-color;
+
+$outline-active-font-color: $btn-default-outline-active-font-color;
+$outline-active-bg-color: $btn-default-outline-active-bg-color;
+
+$outline-disabled-font-color: $btn-default-outline-disabled-font-color;
+$outline-disabled-bg-color: $btn-default-outline-disabled-bg-color;
+
 .root {
     composes: btn from "./base.scss";
 
-    color: $btn-default-font-color;
-    background-color: $btn-default-bg;
+    color: $font-color;
+    background-color: $bg-color;
 
     &:not(.disabled):visited {
-        color: $btn-default-font-color;
+        color: inherit;
     }
     &:not(.disabled):active {
-        color: $btn-default-active-font-color;
-        background: $btn-default-active-bg;
+        color: $active-font-color;
+        background: $active-bg-color;
     }
 }
 
 .disabled {
     composes: disabled from "./base.scss";
-    color: $btn-default-disabled-font-color;
+    color: $disabled-font-color;
+}
+
+.outline-root {
+    composes: btn from "./base.scss";
+
+    color: $outline-font-color;
+    background-color: $outline-bg-color;
+    border: 1px solid $outline-font-color;
+    &::after {
+        border-color: transparent;
+    }
+
+    &:not(.outline-disabled):visited {
+        color: inherit;
+    }
+    &:not(.outline-disabled):active {
+        color: $outline-active-font-color;
+        background: $outline-active-bg-color;
+    }
+}
+
+.outline-disabled {
+    composes: disabled from "./base.scss";
+    color: $outline-disabled-font-color;
+    border: 1px solid $outline-disabled-font-color;
 }

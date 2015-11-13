@@ -3,25 +3,79 @@ $btn-height: 42px;
 $btn-mini-height: 25px;
 $btn-font-size: 18px;
 $btn-font-color: white;
-$btn-disabled-font-color: rgba(255, 255, 255, 0.6);
 $btn-active-font-color: rgba(255, 255, 255, 0.4);
+$btn-disabled-font-color: rgba(255, 255, 255, 0.6);
 $btn-mini-font-size: 14px;
 $btn-border-radius: 5px;
 
-$btn-default-bg: #F7F7F7;
-$btn-default-active-bg: #DEDEDE;
-$btn-default-font-color: #454545;
-$btn-default-disabled-font-color: #C9C9C9;
-$btn-default-active-font-color: #A1A1A1;
 
-$btn-primary-bg: #04be02;
-$btn-primary-active-bg: #039702;
+
+/* primary */
+$btn-primary-color: #04be02;
+
 $btn-primary-font-color: $btn-font-color;
-$btn-primary-disabled-font-color: $btn-disabled-font-color;
-$btn-primary-active-font-color: $btn-active-font-color;
+$btn-primary-bg-color: $btn-primary-color;
 
-$btn-warning-bg: #ef4f4f;
-$btn-warning-active-bg: #c13e3e;
+$btn-primary-active-font-color: rgba($btn-primary-font-color, 0.4);
+$btn-primary-active-bg-color: #039702;
+
+$btn-primary-disabled-font-color: rgba($btn-primary-font-color, 0.6);
+$btn-primary-disabled-bg-color: $btn-primary-bg-color;
+
+/* primary-outline */
+$btn-primary-outline-font-color: $btn-primary-color;
+$btn-primary-outline-bg-color: transparent;
+
+$btn-primary-outline-active-font-color: white;
+$btn-primary-outline-active-bg-color: $btn-primary-outline-font-color;
+
+$btn-primary-outline-disabled-font-color: rgba($btn-primary-outline-font-color, 0.6);
+$btn-primary-outline-disabled-bg-color: $btn-primary-outline-bg-color;
+
+
+
+/* warning */
+$btn-warning-color: #ef4f4f;
+
 $btn-warning-font-color: $btn-font-color;
-$btn-warning-disabled-font-color: $btn-disabled-font-color;
-$btn-warning-active-font-color: $btn-active-font-color;
+$btn-warning-bg-color: $btn-warning-color;
+
+$btn-warning-active-font-color: rgba($btn-warning-font-color, 0.4);
+$btn-warning-active-bg-color: #c13e3e;
+
+$btn-warning-disabled-font-color: rgba($btn-warning-font-color, 0.6);
+$btn-warning-disabled-bg-color: $btn-warning-bg-color;
+
+/* warning-outline */
+$btn-warning-outline-font-color: $btn-warning-color;
+$btn-warning-outline-bg-color: transparent;
+
+$btn-warning-outline-active-font-color: white;
+$btn-warning-outline-active-bg-color: $btn-warning-outline-font-color;
+
+$btn-warning-outline-disabled-font-color: rgba($btn-warning-outline-font-color, 0.6);
+$btn-warning-outline-disabled-bg-color: $btn-warning-outline-bg-color;
+
+
+
+/* default */
+$btn-default-color: #F7F7F7;
+
+$btn-default-font-color: #454545;
+$btn-default-bg-color: $btn-default-color;
+
+$btn-default-active-font-color: #A1A1A1;
+$btn-default-active-bg-color: #DEDEDE;
+
+$btn-default-disabled-font-color: #C9C9C9;
+$btn-default-disabled-bg-color: $btn-default-bg-color;
+
+/* default-outline */
+$btn-default-outline-font-color: #5A5A5A;
+$btn-default-outline-bg-color: transparent;
+
+$btn-default-outline-active-font-color: white;
+$btn-default-outline-active-bg-color: #DEDEDE;
+
+$btn-default-outline-disabled-font-color: rgba($btn-default-outline-font-color, 0.6);
+$btn-default-outline-disabled-bg-color: $btn-default-outline-bg-color;

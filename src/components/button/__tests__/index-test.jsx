@@ -86,6 +86,17 @@ describe("PrimaryButton 组件", () => {
         let output = renderer.getRenderOutput();
         expect(output.props.cx(disabledName)).toBe(disabled);
     });
+
+    let outlineName = "outline-root";
+    let outline = primaryCx(outlineName);
+    it(`如果 outline 属性为 true，className 应该为 ${outline}`, () => {
+        let renderer = TestUtils.createRenderer();
+        renderer.render(
+            <PrimaryButton outline>Primary outline 按钮</PrimaryButton>
+        );
+        let output = renderer.getRenderOutput();
+        expect(output.props.cx(outlineName)).toBe(outline);
+    });
 });
 
 describe("WarningButton 组件", () => {
@@ -110,6 +121,17 @@ describe("WarningButton 组件", () => {
         let output = renderer.getRenderOutput();
         expect(output.props.cx(disabledName)).toBe(disabled);
     });
+
+    let outlineName = "outline-root";
+    let outline = warningCx(outlineName);
+    it(`如果 outline 属性为 true，className 应该为 ${outline}`, () => {
+        let renderer = TestUtils.createRenderer();
+        renderer.render(
+            <WarningButton outline>Warning outline 按钮</WarningButton>
+        );
+        let output = renderer.getRenderOutput();
+        expect(output.props.cx(outlineName)).toBe(outline);
+    });
 });
 
 describe("DefaultButton 组件", () => {
@@ -118,7 +140,7 @@ describe("DefaultButton 组件", () => {
     it(`默认时 className 应该是 ${root}`, () => {
         let renderer = TestUtils.createRenderer();
         renderer.render(
-            <DefaultButton>default 按钮</DefaultButton>
+            <DefaultButton>Default 按钮</DefaultButton>
         );
         let output = renderer.getRenderOutput();
         expect(output.props.cx(rootName)).toBe(root);
@@ -129,9 +151,20 @@ describe("DefaultButton 组件", () => {
     it(`禁用时 className 应该含有 ${disabled}`, () => {
         let renderer = TestUtils.createRenderer();
         renderer.render(
-            <DefaultButton disabled>default 按钮</DefaultButton>
+            <DefaultButton disabled>Default 按钮</DefaultButton>
         );
         let output = renderer.getRenderOutput();
         expect(output.props.cx(disabledName)).toBe(disabled);
+    });
+
+    let outlineName = "outline-root";
+    let outline = defaultCx(outlineName);
+    it(`如果 outline 属性为 true，className 应该为 ${outline}`, () => {
+        let renderer = TestUtils.createRenderer();
+        renderer.render(
+            <DefaultButton outline>Default outline 按钮</DefaultButton>
+        );
+        let output = renderer.getRenderOutput();
+        expect(output.props.cx(outlineName)).toBe(outline);
     });
 });
