@@ -12,7 +12,7 @@ import rename from "./lib/rename-css-composes";
 const ENV = process.env.NODE_ENV;
 const FILES = "src/components/**/*.{sa,sc,c}ss";
 const ROOT = "src";
-const IGNORE = ["**/__tests__/**"];
+const IGNORE = ["**/__tests__/**", "**/button/mixin.scss"];
 const OPTIONS = {
     sourceMap: ENV == "production" ? false : true
 };

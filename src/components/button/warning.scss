@@ -18,47 +18,18 @@ $outline-active-bg-color: $btn-warning-outline-active-bg-color;
 $outline-disabled-font-color: $btn-warning-outline-disabled-font-color;
 $outline-disabled-bg-color: $btn-warning-outline-disabled-bg-color;
 
-.root {
-    composes: btn from "./base.scss";
-
-    color: $font-color;
-    background-color: $bg-color;
-
-    &:not(.disabled):visited {
-        color: inherit;
-    }
-    &:not(.disabled):active {
-        color: $active-font-color;
-        background: $active-bg-color;
-    }
-}
-
-.disabled {
-    composes: disabled from "./base.scss";
-    color: $disabled-font-color;
-}
-
-.outline-root {
-    composes: btn from "./base.scss";
-
-    color: $outline-font-color;
-    background-color: $outline-bg-color;
-    border: 1px solid $outline-font-color;
-    &::after {
-        border-color: transparent;
-    }
-
-    &:not(.outline-disabled):visited {
-        color: inherit;
-    }
-    &:not(.outline-disabled):active {
-        color: $outline-active-font-color;
-        background: $outline-active-bg-color;
-    }
-}
-
-.outline-disabled {
-    composes: disabled from "./base.scss";
-    color: $outline-disabled-font-color;
-    border: 1px solid $outline-disabled-font-color;
-}
+@import "./mixin.scss";
+@include theme(
+    $font-color,
+    $bg-color,
+    $active-font-color,
+    $active-bg-color,
+    $disabled-font-color,
+    $disabled-bg-color,
+    $outline-font-color,
+    $outline-bg-color,
+    $outline-active-font-color,
+    $outline-active-bg-color,
+    $outline-disabled-font-color,
+    $outline-disabled-bg-color
+);

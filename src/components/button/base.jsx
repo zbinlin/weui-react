@@ -6,16 +6,11 @@ export default class BaseButton extends Component {
     render() {
         let props = this.props;
         let cx = props.cx;
-        let classList = [];
-        let prefix = "";
-        if (props.outline) {
-            prefix = "outline";
-        }
-        classList.push("root");
-        if (props.disabled) {
-            classList.push("disabled");
-        }
-        classList = classList.map(cls => prefix ? [prefix, cls].join("-") : cls);
+        let classList = {
+            [props.outline ? "outline-root" : "root"]: true,
+            [props.outline ? "outline-disabled": "disabled"]: !!props.disabled,
+            "small-btn": props.size === "small"
+        };
         return <a className={cx(classList)}>{props.children}</a>;
     }
 }

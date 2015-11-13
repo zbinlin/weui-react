@@ -39,6 +39,12 @@ export default class App extends Component {
                 <DefaultButton outline>按钮</DefaultButton>
                 <hr />
                 <DefaultButton disabled outline>按钮</DefaultButton>
+                <hr />
+                <PrimaryButton size="small">按钮</PrimaryButton>
+                <hr />
+                <WarningButton size="small" disabled>按钮</WarningButton>
+                <hr />
+                <DefaultButton size="small" outline>按钮</DefaultButton>
             </div>
         );
     }
