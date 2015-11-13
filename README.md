@@ -2,21 +2,22 @@
 
 ## Develop
 
-   ``` bash
-   git clone https://github.com/zbinlin/weui-react`
-   cd weui-react
-   npm install
-   npm run build-lib && npm run serve
-   ```
+``` bash
+git clone https://github.com/zbinlin/weui-react`
+cd weui-react
+npm install
+npm run build-lib && npm run serve
+```
 
 
 ## Components
 
 ### Button
 
-themes: primary-btn warning-btn default-btn | primary-outline warning-outline default-outline
-sizes: medium small
-states: disabled
+properties:
+* **themes**: primary-btn warning-btn default-btn | (outline)
+* **sizes**: medium small
+* **states**: disabled
 
 
 ## 疑难杂症

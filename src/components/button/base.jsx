@@ -2,7 +2,7 @@
 
 import React, { Component } from "react";
 
-export default class Button extends Component {
+export default class BaseButton extends Component {
     render() {
         let props = this.props;
         let cx = props.cx;
