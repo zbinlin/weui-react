@@ -17,4 +17,10 @@ async function build() {
     }
 }
 
-run(build);
+if (require.main === module) {
+    run(build);
+} else {
+    module.exports = function () {
+        return run(build);
+    };
+}
