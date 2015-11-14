@@ -2,7 +2,10 @@
 
 import React, { Component } from "react";
 
-import { Button, PrimaryButton, WarningButton, DefaultButton } from "..";
+import {
+    Button, PrimaryButton, WarningButton, DefaultButton,
+    Icon
+} from "..";
 
 export default class App extends Component {
     render() {
@@ -45,6 +48,40 @@ export default class App extends Component {
                 <WarningButton size="small" disabled>按钮</WarningButton>
                 <hr />
                 <DefaultButton size="small" outline>按钮</DefaultButton>
+                <hr />
+                <hr />
+                <div>
+                    <Icon />
+                    <Icon type="circle" />
+                    <Icon type="download" />
+                    <Icon type="info" />
+                    <Icon type="safe-success" />
+                    <Icon type="safe-warning" />
+                    <Icon type="success" />
+                    <Icon type="success-circle" />
+                    <Icon type="success-no-circle" />
+                    <Icon type="waiting" />
+                    <Icon type="waiting-circle" />
+                    <Icon type="warning" />
+                    <Icon type="info-circle" />
+                    <Icon type="cancel" />
+                </div>
+                <div>
+                    <Icon />
+                    <Icon size="large" type="circle" />
+                    <Icon size="large" type="download" />
+                    <Icon size="large" type="info" />
+                    <Icon size="large" type="safe-success" />
+                    <Icon size="large" type="safe-warning" />
+                    <Icon size="large" type="success" />
+                    <Icon size="large" type="success-circle" />
+                    <Icon size="large" type="success-no-circle" />
+                    <Icon size="large" type="waiting" />
+                    <Icon size="large" type="waiting-circle" />
+                    <Icon size="large" type="warning" />
+                    <Icon size="large" type="info-circle" />
+                    <Icon size="large" type="cancel" />
+                </div>
             </div>
         );
     }
