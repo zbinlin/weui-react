@@ -4,10 +4,17 @@ import React, { Component } from "react";
 
 import {
     Button, PrimaryButton, WarningButton, DefaultButton,
-    Icon
+    Icon,
+    Progress
 } from "..";
 
 export default class App extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            canceled: false
+        };
+    }
     render() {
         return (
             <div>
@@ -81,6 +88,15 @@ export default class App extends Component {
                     <Icon size="large" type="warning" />
                     <Icon size="large" type="info-circle" />
                     <Icon size="large" type="cancel" />
+                </div>
+                <div>
+                    <Progress value={0} max={1.0} />
+                    <br />
+                    <Progress value={50} max={100} />
+                    <br />
+                    <Progress value={120} max={150} />
+                    <br />
+                    <Progress value={120} max={150} onCancel={() => { alert("cancel"); this.setState({ canceled: true }); }} canceled={this.state.canceled} />
                 </div>
             </div>
         );

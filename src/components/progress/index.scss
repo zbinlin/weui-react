@@ -1,0 +1,28 @@
+@import "../../base/progress";
+
+.root {
+    display: flex;
+    align-items: center;
+}
+
+.progress {
+    background-color: $progress-bg-color;
+    height: $progress-height;
+    flex: 1;
+}
+
+.progress-bar {
+    width: 0;
+    height: 100%;
+    background-color: $progress-fg-color;
+    transition: width linear 200ms;
+}
+
+.canceled {
+    background-color: $progress-closed-bg-color;
+}
+
+.progress-cancel {
+    margin-left: 15px;
+    font-size: 0;
+}
