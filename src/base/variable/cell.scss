@@ -10,4 +10,4 @@ $cell-font-size: 17px;
 $cell-tips-font-size: 14px;
 
 $cell-line-height: ($cell-height - 2 * $cell-vertical-gap) / $cell-font-size;
-$cell-margin-top: #{20 / $cell-font-size}em;
+$cell-margin-top: #{20px / $cell-font-size}em;

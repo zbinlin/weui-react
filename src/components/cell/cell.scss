@@ -1,6 +1,7 @@
 @import "../../base/cell";
 
 .root {
+    color: inherit;
     padding: $cell-vertical-gap $cell-horizontal-gap;
     // onepx
     display: block; //这个是为了兼容语义化(li)与实现(table-cell)的冲突
@@ -13,6 +14,9 @@
     &:first-child::before {
         display: none;
     }
+}
+a.root {
+    text-decoration: none;
 }
 
 .inner {

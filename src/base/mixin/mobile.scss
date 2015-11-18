@@ -2,8 +2,11 @@
 @import "thin-line";
 
 // tapcolor
-@mixin tap-color($c: black) {
-    tap-highlight-color: $c;
+@mixin tap-color($color: rgba(0, 0, 0, 0)) {
+    -webkit-tap-highlight-color: $color;
+    @if (alpha($color) == 0) {
+        -webkit-tap-highlight-color: transparent;
+    }
 }
 
 //user action
