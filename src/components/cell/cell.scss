@@ -1,0 +1,40 @@
+@import "../../base/cell";
+
+.root {
+    padding: $cell-vertical-gap $cell-horizontal-gap;
+    // onepx
+    display: block; //这个是为了兼容语义化(li)与实现(table-cell)的冲突
+    position: relative;
+    overflow: hidden;
+    &::before {
+        @include thin-line-top;
+        left: $cell-horizontal-gap;
+    }
+    &:first-child::before {
+        display: none;
+    }
+}
+
+.inner {
+    display: table-cell;
+    vertical-align: middle;
+    word-wrap: break-word;
+    word-break: break-all;
+    white-space: nowrap;
+}
+
+.header {
+    composes: inner;
+}
+
+.body {
+    composes: inner;
+    width: 100%;
+    white-space: normal;
+}
+
+.footer {
+    composes: inner;
+    text-align: right;
+    color: $global-text-color;
+}

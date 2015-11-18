@@ -26,15 +26,7 @@
     cursor: pointer;
 
     &:after {
-        content: "";
-        width: 200%;
-        height: 200%;
-        position: absolute;
-        top: 0;
-        left: 0;
-        transform-origin: 0 0;
-        transform: scale(0.5);
-        box-sizing: border-box;
+        @include thin-border;
         border: 1px solid rgba(0, 0, 0, 0.2);
         border-radius: $btn-border-radius * 2;
     }

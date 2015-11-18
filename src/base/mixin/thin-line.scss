@@ -1,0 +1,74 @@
+@mixin thin-line($c: #CECECE, $pos: top) {
+    content: "";
+    position: absolute;
+    box-sizing: border-box;
+    $dir: horizontal;
+    @if $pos == top {
+        top: 0;
+        border-top: 1px solid $c;
+        transform-origin: left top;
+    } @else if $pos == right {
+        right: 0;
+        border-right: 1px solid $c;
+        transform-origin: right top;
+        $dir: vertical;
+    } @else if $pos == bottom {
+        bottom: 0;
+        border-bottom: 1px solid $c;
+        transform-origin: left bottom;
+    } @else if $pos == left {
+        left: 0;
+        border-left: 1px solid $c;
+        transform-origin: left top;
+        $dir: vertical;
+    }
+
+    @if $dir == horizontal {
+        left: 0;
+        right: 0;
+        height: 1px;
+        transform: scaleY(0.5);
+    } @else if $dir == vertical {
+        top: 0;
+        bottom: 0;
+        width: 1px;
+        transform: scaleX(0.5);
+    }
+}
+
+@mixin thin-line-top($c: #C7C7C7) {
+    @include thin-line($c, top);
+}
+
+@mixin thin-line-right($c: #C7C7C7) {
+    @include thin-line($c, right);
+}
+
+@mixin thin-line-bottom($c: #C7C7C7) {
+    @include thin-line($c, bottom);
+}
+
+@mixin thin-line-left($c: #C7C7C7) {
+    @include thin-line($c, left);
+}
+
+
+// half px border
+@mixin thin-border() {
+    content: "";
+    width: 200%;
+    height: 200%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    transform-origin: 0 0;
+    transform: scale(0.5);
+    box-sizing: border-box;
+    pointer-events: none;
+    /* NOTE
+     * pointer-events 不支持 IE10 及以下，由于这里设置了 position: absolute; width: 200%;
+     * height: 200%; 因此可能导致在 IE10 及以下浏览器中有些元素无法点击。
+     * 这里可以根据实际情况进行 hack，例如：
+     * 设置 z-index: -1（在没有背景颜色情况下）或设置需要点击的元素的 z-index
+     */
+}

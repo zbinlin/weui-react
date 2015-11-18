@@ -5,7 +5,8 @@ import React, { Component } from "react";
 import {
     Button, PrimaryButton, WarningButton, DefaultButton,
     Icon,
-    Progress
+    Progress,
+    Cells, Cell
 } from "..";
 
 export default class App extends Component {
@@ -97,6 +98,22 @@ export default class App extends Component {
                     <Progress value={120} max={150} />
                     <br />
                     <Progress value={120} max={150} onCancel={() => { alert("cancel"); this.setState({ canceled: true }); }} canceled={this.state.canceled} />
+                </div>
+                <hr />
+                <div>
+                    <Cells>
+                        <Cell>Hello World</Cell>
+                    </Cells>
+                    <Cells title={<h3 style={{margin: 0}}>Heading</h3>}>
+                        <Cell>Hello World</Cell>
+                    </Cells>
+                    <Cells title={<h3 style={{margin: 0}}>Heading</h3>}>
+                        <Cell header={<Icon type="info" />}>Hello World</Cell>
+                    </Cells>
+                    <Cells title={<h3 style={{margin: 0}}>Heading</h3>}>
+                        <Cell footer={<p style={{margin: 0}}>Description</p>}>Hello World</Cell>
+                        <Cell href="">Hello World</Cell>
+                    </Cells>
                 </div>
             </div>
         );

@@ -16,3 +16,9 @@ export {
 export {
     default as Progress
 } from "./components/progress";
+
+
+export {
+    Cells,
+    Cell
+} from "./components/cell";

@@ -1,32 +1,27 @@
 // font family
-$sansFont: "Helvetica Neue", Helvetica, Arial, sans-serif;
-$serifFont: Georgia,  "Times New Roman", Times, serif;
-$wpFont: "Microsoft YaHei", sans-serif;
-$bizFont: "Helvetica Neue", Helvetica, "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
-$globalFont: $sansFont;
-$globalFontSize: 14px;
+$sans-font: "Helvetica Neue", Helvetica, Arial, sans-serif;
+$serif-font: Georgia,  "Times New Roman", Times, serif;
+$wp-font: "Microsoft YaHei", sans-serif;
+$biz-font: "Helvetica Neue", Helvetica, "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+$global-font: $sans-font;
+$global-font-size: 14px;
 
 // font color
-$globalLinkColor: #61749B;
-$globalDescColor: #B2B2B2;
-$globalWarnColor: #E64340;
-$globalNickNameColor: #576B95;
-$globalTextColor: #888;
-$globalTitleColor: #000;
+$global-link-color: #61749B;
+$global-desc-color: #B2B2B2;
+$global-warn-color: #E64340;
+$global-nickname-color: #576B95;
+$global-text-color: #888;
+$global-title-color: #000;
 
 //border
-$globalBorderColor: #BCBAB6;
+$global-border-color: #BCBAB6;
 
 //arrow
-$globalArrowColor: #C7C7CC;
+$global-arrow-color: #C7C7CC;
 
 //component
-$itemActiveColor: #E4E4E4;
+$item-active-color: #E4E4E4;
 
 //page
-$pageDefaultBackgroundColor: #EFEFF4;
-
-// gap
-$gap5: 5px;
-$gap10: 10px;
-$gap15: 15px;
+$page-default-bg-color: #EFEFF4;

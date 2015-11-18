@@ -1,0 +1,13 @@
+@import "./global";
+
+$cell-bg-color: white;
+$cell-border-color: #D9D9D9;
+$cell-horizontal-gap: 15px;
+$cell-vertical-gap: 10px;
+$cell-inner-horizontal-gap: 0.35em;
+$cell-height: 44px;
+$cell-font-size: 17px;
+$cell-tips-font-size: 14px;
+
+$cell-line-height: ($cell-height - 2 * $cell-vertical-gap) / $cell-font-size;
+$cell-margin-top: #{20 / $cell-font-size}em;

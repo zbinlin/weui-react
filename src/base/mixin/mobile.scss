@@ -1,3 +1,6 @@
+@import "text";
+@import "thin-line";
+
 // tapcolor
 @mixin tap-color($c: black) {
     tap-highlight-color: $c;

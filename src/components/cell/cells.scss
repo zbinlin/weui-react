@@ -1,0 +1,30 @@
+@import "../../base/cell";
+
+.root {
+    margin-top: $cell-margin-top;
+}
+
+.title {
+    margin-top: -$cell-margin-top;
+    padding-top: 0.77em; // 15px - 行高
+    padding-bottom: 0.3em; // 8px - 行高
+    padding-left: $cell-horizontal-gap;
+    padding-right: $cell-horizontal-gap;
+    color: $global-text-color;
+    font-size: $cell-tips-font-size;
+}
+
+.content {
+    background-color: $cell-bg-color;
+    line-height: $cell-line-height;
+    font-size: $cell-font-size; //cell中间有效高度23px，跟客户端默认图标尺寸一致
+
+    // onepx
+    position: relative;
+    &::before {
+        @include thin-line-top;
+    }
+    &::after {
+        @include thin-line-bottom;
+    }
+}
