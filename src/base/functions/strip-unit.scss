@@ -1,22 +1,5 @@
 @function base-unit($number) {
-    $units: (
-        "em": 1em, "ex": 1ex, "ch": 1ch, "rem": 1rem,
-        "vw": 1vw, "vh": 1vh, "vmin": 1vmin, "vmax": 1vmax,
-        "cm": 1cm, "mm": 1mm, "q": 1q, "in": 1in, "pt": 1pt, "pc": 1pc, "px": 1px,
-        "deg": 1deg, "grad": 1grad, "rad": 1rad, "turn": 1turn,
-        "s": 1s, "ms": 1ms,
-        "Hz": 1Hz, "kHz": 1kHz,
-        "dpi": 1dpi, "dpcm": 1dpcm, "dppx": 1dppx,
-        "%": 1%
-    );
-
-    $unit: unit($number);
-
-    @if map-has-key($units, $unit) {
-        @return map-get($units, $unit);
-    } @else {
-        @return 1;
-    }
+    @return $number * 0 + 1;
 }
 
 @function strip-unit($number) {
