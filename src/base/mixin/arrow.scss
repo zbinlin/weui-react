@@ -46,22 +46,22 @@
     border-color: $color;
     border-style: solid;
 }
-@mixin wap-arrow-top($width: 2px, $color: #C8C8CD, $size: 6px) {
+@mixin wap-arrow-top($width: 2px, $color: #C8C8CD, $size: 8px) {
     @include wap-arrow($width, $color, $size);
     $r: v($size);
     transform: rotate(-45deg) translate(-$r, r);
 }
-@mixin wap-arrow-right($width: 2px, $color: #C8C8CD, $size: 6px) {
+@mixin wap-arrow-right($width: 2px, $color: #C8C8CD, $size: 8px) {
     @include wap-arrow($width, $color, $size);
     $r: v($size);
     transform: rotate(45deg) translate(-$r, $r);
 }
-@mixin wap-arrow-bottom($width: 2px, $color: #C8C8CD, $size: 6px) {
+@mixin wap-arrow-bottom($width: 2px, $color: #C8C8CD, $size: 8px) {
     @include wap-arrow($width, $color, $size);
     $r: v($size);
     transform: rotate(135deg) translate(-$r, $r);
 }
-@mixin wap-arrow-left($width: 2px, $color: #C8C8CD, $size: 6px) {
+@mixin wap-arrow-left($width: 2px, $color: #C8C8CD, $size: 8px) {
     @include wap-arrow($width, $color, $size);
     $r: v($size);
     transform: rotate(-135deg) translate(-$r, $r);

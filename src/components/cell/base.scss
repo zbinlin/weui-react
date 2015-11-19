@@ -2,7 +2,6 @@
 
 .root {
     color: inherit;
-    padding: $cell-vertical-gap $cell-horizontal-gap;
     // onepx
     display: block; //这个是为了兼容语义化(li)与实现(table-cell)的冲突
     position: relative;
@@ -15,8 +14,9 @@
         display: none;
     }
 }
-a.root {
-    text-decoration: none;
+
+.padding {
+    padding: $cell-vertical-gap $cell-horizontal-gap;
 }
 
 .inner {
@@ -41,4 +41,14 @@ a.root {
     composes: inner;
     text-align: right;
     color: $global-text-color;
+}
+
+.arrow-right::after {
+    content: "";
+    @include wap-arrow-right;
+    vertical-align: middle;
+    margin-left: 4px;
+}
+.arrow-right > * {
+    display: inline-block;
 }

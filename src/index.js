@@ -26,5 +26,6 @@ export {
 
 export {
     Cells,
-    Cell
+    Cell,
+    Link
 } from "./components/cell";

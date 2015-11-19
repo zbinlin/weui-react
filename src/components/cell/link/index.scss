@@ -1,0 +1,18 @@
+.root {
+    composes: root from "../base.scss";
+    composes: padding from "../base.scss";
+    text-decoration: none;
+}
+
+.header {
+    composes: header from "../base.scss";
+}
+
+.body {
+    composes: body from "../base.scss";
+}
+
+.footer {
+    composes: footer from "../base.scss";
+    composes: arrow-right from "../base.scss";
+}
