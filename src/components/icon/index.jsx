@@ -3,7 +3,7 @@
 import React, { Component } from "react";
 import styles from "./index.scss";
 
-export default class Icon extends Component {
+export class Icon extends Component {
     render() {
         let props = this.props;
         let types = [

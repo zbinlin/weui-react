@@ -1,7 +1,13 @@
 "use strict";
 
+/**
+ * 由于在 babel-core 6.1.21、babel-preset-es2015 6.1.18 中，
+ * export * from <mod>;
+ * 有 bug，因此将使用
+ * export { FOO, ... } from <mod>;
+ */
 export {
-    default as Button,
+    Button,
     PrimaryButton,
     WarningButton,
     DefaultButton
@@ -9,12 +15,12 @@ export {
 
 
 export {
-    default as Icon
+    Icon
 } from "./components/icon";
 
 
 export {
-    default as Progress
+    Progress
 } from "./components/progress";
 
 

@@ -6,7 +6,7 @@ import PrimaryButton from "./primary";
 import WarningButton from "./warning";
 import DefaultButton from "./default";
 
-export default props => {
+export const Button = props => {
     let Button = null;
     switch (props.is) {
         case "primary-btn":
