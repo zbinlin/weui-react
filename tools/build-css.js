@@ -14,7 +14,15 @@ const FILES = "src/components/**/*.{sa,sc,c}ss";
 const ROOT = "src";
 const IGNORE = ["**/__tests__/**", "**/button/mixin.scss"];
 const OPTIONS = {
-    sourceMap: ENV == "production" ? false : true
+    sourceMap: ENV == "production" ? false : true,
+    functions: {
+        "sqrt($x)": function (x) {
+            if (!(x instanceof sass.types.Number)) {
+                throw new TypeError(`Unexpected type for "x"`);
+            }
+            return new sass.types.Number(Math.sqrt(x.getValue()), x.getUnit());
+        }
+    }
 };
 const DST = "lib";
 

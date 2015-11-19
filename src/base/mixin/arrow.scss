@@ -1,0 +1,68 @@
+@import "../functions/strip-unit";
+
+// css2 arrow
+@mixin arrow($border-width) {
+    display: inline-block;
+    width: 0;
+    height: 0;
+    border: $border-width dashed transparent;
+}
+@mixin arrow-top($width, $color) {
+    @include arrow($width);
+    border-top-width: 0;
+    border-bottom-color: $color;
+    border-bottom-style: solid;
+}
+@mixin arrow-right($width, $color) {
+    border-right-width: 0;
+    border-left-color: $color;
+    border-left-style: solid;
+}
+@mixin arrow-bottom($width, $color) {
+    border-bottom-width: 0;
+    border-top-color: $color;
+    border-top-style: solid;
+}
+@mixin arrow-left($width, $color) {
+    border-left-width: 0;
+    border-right-color: $color;
+    border-right-style: solid;
+}
+
+// css3 arrow
+@function v($l) {
+    $unit: base-unit($l);
+    $l: strip-unit($l);
+    $r: $l / 2;
+    $r: (sqrt(2 * $r * $r) - $r) + (1 - 0.8) * $r;
+    @return sqrt($r * $r / 2) * $unit;
+}
+@mixin wap-arrow($width, $color, $size) {
+    display: inline-block;
+    box-sizing: border-box;
+    width: $size;
+    height: $size;
+    border-width: $width $width 0 0;
+    border-color: $color;
+    border-style: solid;
+}
+@mixin wap-arrow-top($width: 2px, $color: #C8C8CD, $size: 6px) {
+    @include wap-arrow($width, $color, $size);
+    $r: v($size);
+    transform: rotate(-45deg) translate(-$r, r);
+}
+@mixin wap-arrow-right($width: 2px, $color: #C8C8CD, $size: 6px) {
+    @include wap-arrow($width, $color, $size);
+    $r: v($size);
+    transform: rotate(45deg) translate(-$r, $r);
+}
+@mixin wap-arrow-bottom($width: 2px, $color: #C8C8CD, $size: 6px) {
+    @include wap-arrow($width, $color, $size);
+    $r: v($size);
+    transform: rotate(135deg) translate(-$r, $r);
+}
+@mixin wap-arrow-left($width: 2px, $color: #C8C8CD, $size: 6px) {
+    @include wap-arrow($width, $color, $size);
+    $r: v($size);
+    transform: rotate(-135deg) translate(-$r, $r);
+}
