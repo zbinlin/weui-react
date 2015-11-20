@@ -1,7 +1,13 @@
+@import "../../../base/cell";
+
 .root {
     composes: root from "../base.scss";
     composes: padding from "../base.scss";
     text-decoration: none;
+}
+.root:active {
+    @include tap-color;
+    background: $item-active-color;
 }
 
 .header {
