@@ -22,6 +22,7 @@
 
 .footer {
     composes: footer from "../base.scss";
+    line-height: 0;
 }
 
 
@@ -39,8 +40,8 @@
 }
 .radio-icon {
     display: none;
+    vertical-align: middle;
 }
 .radio:checked + .radio-icon {
     display: inline-block;
-    vertical-align: top;
 }

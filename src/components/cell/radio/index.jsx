@@ -17,7 +17,7 @@ class Radio extends Component {
             header = <div className={cx("header")}>{header}</div>;
         }
         return (
-            <label htmlFor={props.id} className={cx("root", "padding", props.disabled ? "disabled" : "")}>
+            <div className={cx("root", "padding", props.disabled ? "disabled" : "")}>
                 {header}
                 <div className={cx("body")}>{props.children}</div>
                 <div className={cx("footer")}>
@@ -31,7 +31,7 @@ class Radio extends Component {
                         <Icon type="success-no-circle" size={16} />
                     </span>
                 </div>
-            </label>
+            </div>
         );
     }
 }
