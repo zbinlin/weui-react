@@ -14,6 +14,9 @@ config.plugins.push(new webpack.HotModuleReplacementPlugin());
 let compiler = webpack(config);
 let server = new webpackDevServer(compiler, {
     hot: true,
-    contentBase: "./dist/"
+    contentBase: "./dist/",
+    watchOptions: {
+        aggregateTimeout: 300
+    }
 });
 server.listen(PORT);
