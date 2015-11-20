@@ -30,7 +30,15 @@ class Icon extends Component {
             }
             return rst;
         }, []);
-        return <i className={rst.join(" ")} />;
+        let styl = null;
+        if (!isNaN(size)) {
+            styl = {
+                width: size,
+                height: size,
+                fontSize: size
+            };
+        }
+        return <i className={rst.join(" ")} style={styl} />;
     }
 }
 
