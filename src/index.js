@@ -27,5 +27,6 @@ export {
 export {
     Cells,
     Cell,
-    Link
+    Link,
+    Radio
 } from "./components/cell";

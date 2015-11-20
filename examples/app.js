@@ -6,7 +6,7 @@ import {
     Button, PrimaryButton, WarningButton, DefaultButton,
     Icon,
     Progress,
-    Cells, Cell, Link
+    Cells, Cell, Link, Radio
 } from "..";
 
 export default class App extends Component {
@@ -62,7 +62,6 @@ export default class App extends Component {
                 <hr />
                 <hr />
                 <div>
-                    <Icon />
                     <Icon type="circle" />
                     <Icon type="download" />
                     <Icon type="info" />
@@ -118,6 +117,11 @@ export default class App extends Component {
                         <Link href="javascript:">Hello World</Link>
                         <Link header={icon}>Hello World</Link>
                         <Link footer={<p style={{margin: 0}}>Description</p>}>Hello World</Link>
+                    </Cells>
+                    <Cells title={"Radio Example"}>
+                        <Radio id="r1" name="xxx">Radio1</Radio>
+                        <Radio id="r2" name="xxx" defaultChecked={true}>Radio2</Radio>
+                        <Radio id="r3" name="xxx" disabled>Radio3(disabled)</Radio>
                     </Cells>
                 </div>
             </div>

@@ -1,0 +1,46 @@
+@import "../../../base/cell";
+
+.root {
+    composes: root from "../base.scss";
+}
+.root:not(.disabled):active {
+    background: $global-active-bg-color;
+}
+
+.disabled {
+    color: $global-disabled-font-color;
+}
+
+.padding {
+    composes: padding from "../base.scss";
+}
+
+
+.body {
+    composes: body from "../base.scss";
+}
+
+.footer {
+    composes: footer from "../base.scss";
+}
+
+
+.radio {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    border: 0;
+    background: none;
+    margin: 0;
+    padding: 0;
+}
+.radio-icon {
+    display: none;
+}
+.radio:checked + .radio-icon {
+    display: inline-block;
+    vertical-align: top;
+}

@@ -23,5 +23,9 @@ $global-arrow-color: #C7C7CC;
 //component
 $item-active-color: #E4E4E4;
 
+$global-active-bg-color: #E4E4E4;
+$global-disabled-font-color: transparentize($global-text-color, 0.4);
+
+
 //page
 $page-default-bg-color: #EFEFF4;
