@@ -6,7 +6,7 @@ import {
     Button, PrimaryButton, WarningButton, DefaultButton,
     Icon,
     Progress,
-    Cells, Cell, Link, Radio
+    Cells, Cell, Link, Radio, Checkbox
 } from "..";
 
 export default class App extends Component {
@@ -122,6 +122,11 @@ export default class App extends Component {
                         <Radio id="r1" name="xxx">Radio1</Radio>
                         <Radio id="r2" name="xxx" defaultChecked={true}>Radio2</Radio>
                         <Radio id="r3" name="xxx" disabled>Radio3(disabled)</Radio>
+                    </Cells>
+                    <Cells title={"Checkbox Example"}>
+                        <Checkbox id="c1" name="xx1">测试 Checkbox1</Checkbox>
+                        <Checkbox id="c2" name="xx2" defaultChecked={true}>Checkbox2</Checkbox>
+                        <Checkbox id="c3" name="xx3" disabled>Checkbox3(disabled)</Checkbox>
                     </Cells>
                 </div>
             </div>

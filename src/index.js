@@ -28,5 +28,6 @@ export {
     Cells,
     Cell,
     Link,
-    Radio
+    Radio,
+    Checkbox
 } from "./components/cell";

@@ -33,8 +33,6 @@ class Icon extends Component {
         let styl = null;
         if (!isNaN(size)) {
             styl = {
-                width: size,
-                height: size,
                 fontSize: size
             };
         }
