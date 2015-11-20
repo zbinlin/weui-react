@@ -25,6 +25,7 @@ export const Button = props => {
 };
 
 export {
+    Button as default,
     PrimaryButton,
     WarningButton,
     DefaultButton

@@ -7,7 +7,6 @@ import classNames from "classnames/bind";
 
 const cx = classNames.bind(styles);
 
-
 export default class Link extends Component {
     render() {
         let props = this.props;

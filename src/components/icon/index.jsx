@@ -3,7 +3,7 @@
 import React, { Component } from "react";
 import styles from "./index.scss";
 
-export class Icon extends Component {
+class Icon extends Component {
     render() {
         let props = this.props;
         let types = [
@@ -33,3 +33,6 @@ export class Icon extends Component {
         return <i className={rst.join(" ")} />;
     }
 }
+
+export default Icon;
+export { Icon };

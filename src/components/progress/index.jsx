@@ -6,7 +6,7 @@ import classNames from "classnames/bind";
 
 const cx = classNames.bind(styles);
 
-import { Icon } from "../icon";
+import Icon from "../icon";
 
 class Progress extends Component {
     render() {
@@ -69,4 +69,5 @@ class Progress extends Component {
     }
 }
 
+export default Progress;
 export { Progress };
