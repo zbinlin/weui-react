@@ -6,7 +6,7 @@ import {
     Button, PrimaryButton, WarningButton, DefaultButton,
     Icon,
     Progress,
-    Cells, Cell, Link, Radio, Checkbox
+    Cells, Cell, Link, Radio, Checkbox, Switch
 } from "..";
 
 export default class App extends Component {
@@ -127,6 +127,9 @@ export default class App extends Component {
                         <Checkbox id="c1" name="xx1">测试 Checkbox1</Checkbox>
                         <Checkbox id="c2" name="xx2" defaultChecked={true}>Checkbox2</Checkbox>
                         <Checkbox id="c3" name="xx3" disabled>Checkbox3(disabled)</Checkbox>
+                    </Cells>
+                    <Cells title={"Switcher Example"}>
+                        <Switch id="s1" name="sx1" defaultChecked={true}>开关</Switch>
                     </Cells>
                 </div>
             </div>

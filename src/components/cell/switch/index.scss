@@ -1,0 +1,98 @@
+@import "../../../base/cell";
+
+.root {
+    composes: root from "../base.scss";
+}
+
+.padding {
+    composes: padding from "../base.scss";
+    padding-top: ($cell-height - $switch-height) / 2;
+    padding-bottom: ($cell-height - $switch-height) / 2;
+}
+
+.header {
+    composes: header from "../base.scss";
+}
+
+.body {
+    composes: body from "../base.scss";
+}
+
+.footer {
+    composes: footer from "../base.scss";
+}
+
+.switch {
+    position: relative;
+    width: 52px;
+    height: $switch-height;
+    z-index: 0;
+
+    > [type="checkbox"] {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        box-sizing: inherit;
+        outline: 0;
+        border: 0;
+        background: none;
+        margin: 0;
+        padding: 0;
+        opacity: 0;
+        z-index: 1;
+
+        + .icon {
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            border: 1px solid #DFDFDF;
+            border-radius: 16px;
+            box-sizing: border-box;
+            background: #DFDFDF;
+
+            &::before {
+                content: "";
+                position: absolute;
+                z-index: 0;
+                top: 0;
+                left: 0;
+                width: 50px;
+                height: $switch-height - 2;
+                border-radius: 15px;
+                background-color: #FDFDFD;
+                transition: transform .3s;
+            }
+            &::after {
+                content: "";
+                position: absolute;
+                z-index: 0;
+                top: 0;
+                left: 0;
+                width: $switch-height - 2;
+                height: $switch-height - 2;
+                border-radius: 15px;
+                background-color: #FFFFFF;
+                box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+                transition: transform .3s;
+            }
+        }
+    }
+
+    > [type="checkbox"]:checked {
+        + .icon {
+            border-color: #04BE02;
+            background-color: #04BE02;
+
+            &::before {
+                transform: scale(0);
+            }
+            &::after {
+                transform: translateX(20px);
+            }
+        }
+    }
+}
