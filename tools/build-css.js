@@ -8,6 +8,7 @@ import glob from "./lib/glob-promise";
 import mkdir from "mkdir-promise";
 import postcss from "postcss";
 import rename from "./lib/rename-css-composes";
+import autoprefixer from "autoprefixer";
 
 const ENV = process.env.NODE_ENV;
 const FILES = "src/components/**/*.{sa,sc,c}ss";
@@ -58,7 +59,18 @@ export default function buildCSS(paths = FILES, dest = DST, ignore = IGNORE, opt
                         }),
                         function (err, result) {
                             if (err) return reject(err);
-                            let processor = postcss([rename]);
+                            let processor = postcss([
+                                rename,
+                                autoprefixer({
+                                    browsers: [
+                                        "last 2 version",
+                                        "Android >= 2.2",
+                                        "iOS >= 4",
+                                        "last 2 OperaMobile version",
+                                        "last 2 OperaMini version"
+                                    ]
+                                })
+                            ]);
                             let map = false;
                             if (result.map) {
                                 map = {

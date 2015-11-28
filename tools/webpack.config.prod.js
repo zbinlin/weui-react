@@ -24,7 +24,7 @@ export default {
             {
                 test: /\.(s[ac]|c)ss$/,
                 exclude: /node_modules|dist/,
-                loaders: ["style", "css?modules&+autoprefixer", "sass"]
+                loaders: ["style", "css?modules&-autoprefixer", "sass"]
             }
         ]
     },
