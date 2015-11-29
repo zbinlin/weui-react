@@ -1,0 +1,53 @@
+@import "../../../base/cell.scss";
+
+.root {
+    composes: root from "../base.scss";
+}
+
+.padding {
+    composes: padding from "../base.scss";
+}
+
+.header {
+    composes: header from "../base.scss";
+    padding-left: $cell-horizontal-gap;
+}
+
+.body {
+    composes: body from "../base.scss";
+}
+
+.footer {
+    composes: footer from "../base.scss";
+    width: 1px;
+}
+
+
+.select-container {
+    position: relative;
+    width: 100%;
+    height: 44px;
+}
+.select-container::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: $cell-horizontal-gap;
+    bottom: 0;
+    @include wap-arrow-right;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.select {
+    padding-left: $cell-horizontal-gap;
+    padding-right: 30px;
+    appearance: none;
+    margin: 0;
+    outline: 0;
+    border: 0;
+    width: 100%;
+    height: 100%;
+    background: none;
+    font-size: inherit;
+}

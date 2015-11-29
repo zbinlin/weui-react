@@ -30,5 +30,6 @@ export {
     Link,
     Radio,
     Checkbox,
-    Switch
+    Switch,
+    Select
 } from "./components/cell";

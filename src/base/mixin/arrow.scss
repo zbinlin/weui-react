@@ -6,6 +6,7 @@
     width: 0;
     height: 0;
     border: $border-width dashed transparent;
+    pointer-events: none;
 }
 @mixin arrow-top($width, $color) {
     @include arrow($width);
@@ -45,6 +46,7 @@
     border-width: $width $width 0 0;
     border-color: $color;
     border-style: solid;
+    pointer-events: none;
 }
 @mixin wap-arrow-top($width: 2px, $color: #C8C8CD, $size: 8px) {
     @include wap-arrow($width, $color, $size);

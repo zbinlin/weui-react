@@ -6,7 +6,7 @@ import {
     Button, PrimaryButton, WarningButton, DefaultButton,
     Icon,
     Progress,
-    Cells, Cell, Link, Radio, Checkbox, Switch
+    Cells, Cell, Link, Radio, Checkbox, Switch, Select
 } from "..";
 
 export default class App extends Component {
@@ -130,6 +130,10 @@ export default class App extends Component {
                     </Cells>
                     <Cells title={"Switcher Example"}>
                         <Switch id="s1" name="sx1" defaultChecked={true}>开关</Switch>
+                    </Cells>
+                    <Cells title={"Select Example"}>
+                        <Select id="s2" name="sx2" options={[["name", 10], 20, "three"]} selectedIndex={1}>选择</Select>
+                        <Select id="s3" name="sx3" options={[["name", 10], 20, "three"]} defaultValue={"three"}>选择</Select>
                     </Cells>
                 </div>
             </div>
