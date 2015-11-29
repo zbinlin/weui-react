@@ -27,6 +27,7 @@
     width: 52px;
     height: $switch-height;
     z-index: 0;
+    overflow: hidden;
 
     > [type="checkbox"] {
         position: absolute;
