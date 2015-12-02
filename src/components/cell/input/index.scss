@@ -1,0 +1,67 @@
+@import "../../../base/cell";
+
+.root {
+    composes: root from "../base.scss";
+    min-height: $cell-height;
+    line-height: $cell-height;
+}
+
+.padding {
+    composes: padding from "../base.scss";
+}
+
+.header {
+    composes: header from "../base.scss";
+    padding-left: $cell-horizontal-gap;
+
+    > :only-child {
+        display: block;
+        box-sizing: border-box;
+        min-width: 3em;
+        padding-right: 0.3em;
+    }
+}
+
+.body {
+    composes: body from "../base.scss";
+}
+
+.footer {
+    composes: footer from "../base.scss";
+    line-height: 0;
+}
+
+
+.input-container {
+    width: 100%;
+}
+
+.input {
+    appearance: none;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    background: none;
+    font-size: inherit;
+    width: 100%;
+    height: #{$cell-line-height}em;
+    line-height: $cell-line-height;
+
+    // hides the spin-button
+    &::-webkit-outer-spin-button, &::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+    }
+}
+
+.input-icon {
+}
+.input-icon:only-child::after {
+    content: "";
+    display: inline-block;
+    height: 0;
+    line-height: 0;
+    vertical-align: top;
+    margin-right: $cell-horizontal-gap;
+}
