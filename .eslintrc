@@ -28,6 +28,10 @@
         ],
         "no-console": [
             0
+        ],
+        "comma-dangle": [
+            0,
+            "always-multiline"
         ]
     },
     "env": {
