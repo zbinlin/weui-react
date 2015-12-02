@@ -6,7 +6,7 @@ import {
     Button, PrimaryButton, WarningButton, DefaultButton,
     Icon,
     Progress,
-    Cells, Cell, Link, Radio, Checkbox, Switch, Select, Input,
+    Cells, Cell, Link, Radio, Checkbox, Switch, Select, Input, Textarea
 } from "..";
 
 export default class App extends Component {
@@ -140,6 +140,9 @@ export default class App extends Component {
                         <Input type="date" valid="true">日期</Input>
                         <Input type="datetime-local">时间</Input>
                         <Input footer={<img src={QRCODE_IMG} height={44} />}>验证码</Input>
+                    </Cells>
+                    <Cells title={"Textarea Example"}>
+                        <Textarea placeholder="This is a placeholder" />
                     </Cells>
                 </div>
             </div>

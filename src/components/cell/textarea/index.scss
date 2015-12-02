@@ -1,0 +1,30 @@
+@import "../../../base/cell";
+
+.root {
+    composes: root from "../base.scss";
+    composes: padding from "../base.scss";
+}
+
+.header {
+    composes: header from "../base.scss";
+}
+
+.body {
+    composes: body from "../base.scss";
+}
+
+.footer {
+    composes: footer from "../base.scss";
+    width: 1px;
+}
+
+.textarea {
+    appearance: none;
+    border: 0;
+    padding: 0;
+    box-sizing: border-box;
+    width: 100%;
+    resize: none;
+    font-size: 1em;
+    line-height: inherit;
+}

@@ -10,17 +10,17 @@ export {
     Button,
     PrimaryButton,
     WarningButton,
-    DefaultButton
+    DefaultButton,
 } from "./components/button";
 
 
 export {
-    Icon
+    Icon,
 } from "./components/icon";
 
 
 export {
-    Progress
+    Progress,
 } from "./components/progress";
 
 
@@ -32,5 +32,6 @@ export {
     Checkbox,
     Switch,
     Select,
-    Input
+    Input,
+    Textarea,
 } from "./components/cell";
