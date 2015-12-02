@@ -18,8 +18,8 @@ class Select extends Component {
                 return [opt, opt, false];
             }
         });
-        let content = options.map(opt => {
-            return <option value={opt[1]}>{opt[0]}</option>;
+        let content = options.map((opt, idx) => {
+            return <option key={idx} value={opt[1]}>{opt[0]}</option>;
         });
         let defaultValue = (() => {
             if (props.hasOwnProperty("defaultValue")) {
@@ -52,7 +52,7 @@ class Select extends Component {
 }
 
 Select.defaultProps = {
-    options: []
+    options: [],
 };
 
 export default Select;
