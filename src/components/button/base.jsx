@@ -11,6 +11,13 @@ export default class BaseButton extends Component {
             [props.outline ? "outline-disabled": "disabled"]: !!props.disabled,
             "small-btn": props.size === "small"
         };
-        return <a className={cx(classList)} role="button" aria-disabled={props.disabled}>{props.children}</a>;
+        return (
+            <a className={cx(classList)}
+               role="button"
+               onClick={this.props.onClick}
+               aria-disabled={props.disabled}>
+               {props.children}
+            </a>
+        );
     }
 }
