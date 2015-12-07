@@ -35,3 +35,8 @@ export {
     Input,
     Textarea,
 } from "./components/cell";
+
+
+export {
+    Alert,
+} from "./components/dialog";

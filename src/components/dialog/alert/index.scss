@@ -1,0 +1,56 @@
+@import "../../../base/dialog";
+
+.alert {
+    background: $dialog-background-color;
+    border-radius: 3px;
+    text-align: center;
+    width: 85%;
+    overflow: hidden;
+}
+@media screen and (min-width: 1024px) {
+    .alert {
+        width: 35%;
+    }
+}
+
+.header {
+    padding: 1.2em 0 0.5em;
+
+    > h2 {
+        margin: 0;
+        font-weight: 400;
+        font-size: 17px;
+    }
+}
+
+.content {
+    padding: 0 20px;
+    font-size: 15px;
+    color: $global-text-color;
+}
+
+.footer {
+    line-height: 42px;
+    margin-top: 20px;
+    font-size: 17px;
+    button {
+        appearance: none;
+        display: block;
+        font-size: inherit;
+        line-height: inherit;
+        color: $dialog-link-color;
+        padding: 0;
+        border: 0;
+        background: none;
+        width: 100%;
+        @include tap-color;
+        &:active {
+            background: $dialog-line-color;
+        }
+    }
+    position: relative;
+    &::before {
+        content: "";
+        @include thin-line-top($dialog-line-color);
+    }
+}

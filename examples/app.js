@@ -6,7 +6,8 @@ import {
     Button, PrimaryButton, WarningButton, DefaultButton,
     Icon,
     Progress,
-    Cells, Cell, Link, Radio, Checkbox, Switch, Select, Input, Textarea
+    Cells, Cell, Link, Radio, Checkbox, Switch, Select, Input, Textarea,
+    Alert,
 } from "..";
 
 export default class App extends Component {
@@ -14,7 +15,21 @@ export default class App extends Component {
         super(props);
         this.state = {
             canceled: false,
+            alert: false,
         };
+    }
+    alert() {
+        this.setState({
+            alert: true
+        });
+    }
+    alertCallBack(promise) {
+        promise.then(() => {
+            this.setState({
+                alert: false
+            });
+            alert("alert callback!");
+        });
     }
     render() {
         let icon = <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAC4AAAAuCAMAAABgZ9sFAAAAVFBMVEXx8fHMzMzr6+vn5+fv7+/t7e3d3d2+vr7W1tbHx8eysrKdnZ3p6enk5OTR0dG7u7u3t7ejo6PY2Njh4eHf39/T09PExMSvr6+goKCqqqqnp6e4uLgcLY/OAAAAnklEQVRIx+3RSRLDIAxE0QYhAbGZPNu5/z0zrXHiqiz5W72FqhqtVuuXAl3iOV7iPV/iSsAqZa9BS7YOmMXnNNX4TWGxRMn3R6SxRNgy0bzXOW8EBO8SAClsPdB3psqlvG+Lw7ONXg/pTld52BjgSSkA3PV2OOemjIDcZQWgVvONw60q7sIpR38EnHPSMDQ4MjDjLPozhAkGrVbr/z0ANjAF4AcbXmYAAAAASUVORK5CYII="
@@ -144,6 +159,15 @@ export default class App extends Component {
                     <Cells title={"Textarea Example"}>
                         <Textarea placeholder="This is a placeholder" />
                     </Cells>
+                </div>
+                <hr />
+                <div>
+                    <Button onClick={this.alert.bind(this)}>点击</Button>
+                    <Alert title="This is an alert example" modal
+                           callback={this.alertCallBack.bind(this)}
+                           open={this.state.alert}>
+                        Hello World!
+                    </Alert>
                 </div>
             </div>
         );
