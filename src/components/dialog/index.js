@@ -1,0 +1,5 @@
+"use strict";
+
+import Dialog from "./base";
+export default Dialog;
+export { Dialog };
