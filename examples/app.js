@@ -7,7 +7,7 @@ import {
     Icon,
     Progress,
     Cells, Cell, Link, Radio, Checkbox, Switch, Select, Input, Textarea,
-    Alert,
+    Alert, Confirm,
 } from "..";
 
 export default class App extends Component {
@@ -16,6 +16,7 @@ export default class App extends Component {
         this.state = {
             canceled: false,
             alert: false,
+            confirm: false,
         };
     }
     alert() {
@@ -29,6 +30,19 @@ export default class App extends Component {
                 alert: false
             });
             alert("alert callback!");
+        });
+    }
+    confirm() {
+        this.setState({
+            confirm: true
+        });
+    }
+    confirmCallback(promise) {
+        promise.then(confirm => {
+            this.setState({
+                confirm: false
+            });
+            alert(confirm);
         });
     }
     render() {
@@ -162,12 +176,24 @@ export default class App extends Component {
                 </div>
                 <hr />
                 <div>
+                    <div>Alert</div>
                     <Button onClick={this.alert.bind(this)}>点击</Button>
-                    <Alert title="This is an alert example" modal
+                    <Alert title="This is an alert example"
                            callback={this.alertCallBack.bind(this)}
                            open={this.state.alert}>
                         Hello World!
                     </Alert>
+                </div>
+                <hr />
+                <div>
+                    <div>Confirm</div>
+                    <Button onClick={this.confirm.bind(this)}>点击</Button>
+                    <Confirm title="This is a confirm example"
+                             callback={this.confirmCallback.bind(this)}
+                             open={this.state.confirm}>
+                        <div>自定义弹窗内容</div>
+                        <div>...</div>
+                    </Confirm>
                 </div>
             </div>
         );

@@ -39,4 +39,5 @@ export {
 
 export {
     Alert,
+    Confirm,
 } from "./components/dialog";
