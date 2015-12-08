@@ -45,4 +45,5 @@ export {
 
 export {
     Toast,
+    Loading,
 } from "./components/toast";

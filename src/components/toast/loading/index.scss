@@ -1,0 +1,58 @@
+.loading {
+    position: relative;
+    margin: 26px 0;
+}
+.leaf {
+    position: absolute;
+    top: -1px;
+    opacity: 0.25;
+    &::before {
+        content: "";
+        position: absolute;
+        width: 8.14px;
+        height: 3.08px;
+        background: rgb(209, 209, 213);
+        box-shadow: rgba(0, 0, 0, 0.0980392) 0px 0px 1px;
+        border-radius: 1px;
+        transform-origin: left 50% 0px;
+    }
+    $loading-leaf-count: 12;
+    @for $i from 0 to $loading-leaf-count {
+        &:nth-of-type(#{$i + 1}) {
+            animation: opacity-60-25-#{$i}-#{$loading-leaf-count} 1.25s linear infinite;
+            &::before {
+                transform: rotate(#{$i * 30}deg) translate(7.92px, 0px);
+            }
+        }
+    }
+    @for $i from 0 to $loading-leaf-count {
+        @at-root {
+            $leaf-step: 100 / $loading-leaf-count;
+            $opacityValues: 0.25, 0.25, 0.25, 0.25, 0.25, 0.270958333333333,
+                0.375125, 0.479291666666667, 0.583458333333333,
+                0.687625, 0.791791666666667, 0.895958333333333;
+            $step1: 0%;
+            $step2: "#{(0.01 + $leaf-step * $i) % 100}%";
+            $step3: "#{(0.02 + $leaf-step * $i) % 100}%";
+            $step4: "#{(60.01 + $leaf-step * $i) % 100}%";
+            $step5: 100%;
+            @keyframes opacity-60-25-#{$i}-#{$loading-leaf-count} {
+                #{$step1} {
+                    opacity: nth($opacityValues, $i + 1);
+                }
+                #{$step2} {
+                    opacity: 0.25;
+                }
+                #{$step3} {
+                    opacity: 1;
+                }
+                #{$step4} {
+                    opacity: 0.25;
+                }
+                #{$step5} {
+                    opacity: nth($opacityValues, $i + 1);
+                }
+            }
+        }
+    }
+}
