@@ -11,10 +11,13 @@ const cx = classNames.bind(styles);
 export default class Alert extends Component {
     clickHandle() {
         if (typeof this.props.callback === "function") {
-            this.props.callback(new Promise(resolve => {
-                resolve();
-            }));
+            this.props.callback(this.alert.bind(this));
         }
+    }
+    alert() {
+        return new Promise(resolve => {
+            resolve();
+        });
     }
     render() {
         let props = this.props;

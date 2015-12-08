@@ -28,8 +28,8 @@ export default class App extends Component {
             alert: true
         });
     }
-    alertCallBack(promise) {
-        promise.then(() => {
+    alertCallBack(done) {
+        done().then(() => {
             this.setState({
                 alert: false
             });
