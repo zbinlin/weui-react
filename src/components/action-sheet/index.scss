@@ -1,0 +1,50 @@
+@import "../../base/action-sheet";
+
+.root {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    transform: translate(0, 100%);
+    backface-visibility: hidden;
+    transition: transform 0.3s ease;
+    background-color: $page-default-bg-color;
+}
+
+.menu {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    font-size: 18px;
+    line-height: 48px;
+    text-align: center;
+
+    > li {
+        background: white;
+
+        position: relative;
+        &:not(:first-of-type):not([role="separator"]):not(.cancel) {
+            &::before {
+                @include thin-line-top;
+            }
+        }
+
+        &[role="separator"] {
+            height: 6px;
+            background: $page-default-bg-color;
+        }
+
+        > a {
+            display: block;
+            width: 100%;
+            height: 100%;
+            color: inherit;
+            text-decoration: none;
+        }
+    }
+}
+
+.show {
+    transform: translate(0, 0);
+}
