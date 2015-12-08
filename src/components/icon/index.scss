@@ -23,6 +23,7 @@
     vertical-align: top;
 }
 .icon::before {
+    content: attr(data-icon);
     font-family: weui;
     font-style: normal;
     font-weight: normal;
@@ -43,80 +44,6 @@
 .normal {
     font-size: 23px;
 }
-
-.blank::before {
-    content: "";
-}
-
-.circle::before {
-    content: "\EA01";
-    color: #C9C9C9;
-}
-
-.download::before {
-    content: "\EA02";
-    color: #09BB07;
-}
-
-.info::before {
-    content: "\EA03";
-    color: #10AEFF;
-}
-
-.safe-success::before {
-    content: "\EA04";
-    color: #09BB07;
-}
-
-.safe-warning::before {
-    content: "\EA05";
-    color: #FFBE00;
-}
-
-.success::before {
-    content: "\EA06";
-    color: #09BB07;
-}
-
-.success-circle::before {
-    content: "\EA07";
-    color: #09BB07;
-}
-
-.success-no-circle::before {
-    content: "\EA08";
-    color: #09BB07;
-}
-
-.waiting::before {
-    content: "\EA09";
-    color: #10AEFF;
-}
-
-.waiting-circle::before {
-    content: "\EA0A";
-    color: #10AEFF;
-}
-
-.warning::before {
-    content: "\EA0B";
-    color: #F43530;
-}
-
-.info-circle::before {
-    content: "\EA0C";
-    color: #09BB07;
-}
-
-.cancel::before {
-    content: "\EA0D";
-    color: #F43530;
-}
-
 .large {
     font-size: 104px;
-}
-
-.large-warning::before {
-    color: #F76260;
 }
