@@ -24,10 +24,11 @@
         background: white;
 
         position: relative;
-        &:not(:first-of-type):not([role="separator"]):not(.cancel) {
-            &::before {
-                @include thin-line-top;
-            }
+        &[role="menuitem"]:not(:first-of-type)::before {
+            @include thin-line-top;
+        }
+        &[role="separator"] + [role="menuitem"]::before {
+            display: none;
         }
 
         &[role="separator"] {
