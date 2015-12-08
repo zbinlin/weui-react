@@ -9,12 +9,15 @@ import styles from "./index.scss";
 const cx = classNames.bind(styles);
 
 export default class Confirm extends Component {
-    clickHandle(confirm) {
+    onClick(confirm) {
         if (typeof this.props.callback === "function") {
-            this.props.callback(new Promise(resolve => {
-                resolve(!!confirm);
-            }));
+            this.props.callback(this.confirm.bind(this, confirm));
         }
+    }
+    confirm(rst) {
+        return new Promise(resolve => {
+            resolve(!!rst);
+        });
     }
     render() {
         let props = this.props;
@@ -29,9 +32,9 @@ export default class Confirm extends Component {
                     </div>
                     <footer className={cx("footer")}>
                         <button className={cx("btn-default")}
-                                onClick={this.clickHandle.bind(this, false)}>取消</button>
+                                onClick={this.onClick.bind(this, false)}>取消</button>
                         <button className={cx("btn-primary")}
-                                onClick={this.clickHandle.bind(this, true)}>确定</button>
+                                onClick={this.onClick.bind(this, true)}>确定</button>
                     </footer>
                 </div>
             </Dialog>

@@ -41,8 +41,8 @@ export default class App extends Component {
             confirm: true
         });
     }
-    confirmCallback(promise) {
-        promise.then(confirm => {
+    confirmCallback(done) {
+        done().then(confirm => {
             this.setState({
                 confirm: false
             });
