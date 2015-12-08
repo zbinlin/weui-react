@@ -1,0 +1,25 @@
+.root {
+    width: 7.6em;
+    min-height: 7.6em;
+    background: rgba(40, 40, 40, 0.75);
+    text-align: center;
+    border-radius: 5px;
+    color: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    > * {
+        display: block;
+    }
+}
+
+.content {
+    font-size: 14px;
+
+    &:not(:only-child) {
+        margin-top: 3px;
+    }
+}

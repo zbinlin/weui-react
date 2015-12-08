@@ -41,3 +41,8 @@ export {
     Alert,
     Confirm,
 } from "./components/dialog";
+
+
+export {
+    Toast,
+} from "./components/toast";
