@@ -5,7 +5,7 @@ import ReactDOM from "react-dom";
 
 import Portal from "./portal";
 
-class Dialog extends Component {
+export default class Dialog extends Component {
     componentDidMount() {
         if (this.props.open !== false) {
             this.show();
@@ -39,5 +39,3 @@ class Dialog extends Component {
         return null;
     }
 }
-
-export default Dialog;

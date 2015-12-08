@@ -19,7 +19,7 @@ export default class Portal extends Component {
             classList.push("backdrop");
         }
         return (
-            <div className={cx(...classList)}>
+            <div className={cx(...classList)} onClick={props.onClick}>
                 {this.props.children}
             </div>
         );
