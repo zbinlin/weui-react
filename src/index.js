@@ -52,3 +52,8 @@ export {
 export {
     ActionSheet,
 } from "./components/action-sheet";
+
+
+export {
+    Article,
+} from "./components/page";
