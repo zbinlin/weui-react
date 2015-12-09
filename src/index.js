@@ -57,4 +57,5 @@ export {
 
 export {
     Article,
+    Msg,
 } from "./components/page";

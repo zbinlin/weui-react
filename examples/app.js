@@ -10,7 +10,7 @@ import {
     Alert, Confirm,
     Toast, Loading,
     ActionSheet,
-    Article,
+    Article, Msg,
 } from "..";
 
 export default class App extends Component {
@@ -92,6 +92,16 @@ export default class App extends Component {
             this.setState({
                 actionSheet: false
             });
+        });
+    }
+    onMsgConfirm(done) {
+        done().then(() => {
+            alert("confirm");
+        });
+    }
+    onMsgCancel(done) {
+        done().then(() => {
+            alert("cancel");
         });
     }
     render() {
@@ -264,6 +274,7 @@ export default class App extends Component {
                     <Button onClick={this.actionSheet.bind(this)}>点击</Button>
                     {actionSheet}
                 </div>
+                <hr />
                 <div>
                     <Article>
                         <h1>大标题</h1>
@@ -285,6 +296,16 @@ export default class App extends Component {
                             </section>
                         </section>
                     </Article>
+                </div>
+                <hr />
+                <div>
+                    <Msg icon={<Icon size="large" type="success" />}
+                         title="操作成功"
+                         more=""
+                         onConfirm={this.onMsgConfirm.bind(this)}
+                         onCancel={this.onMsgCancel.bind(this)}>
+                        内容详情，可根据实际需要安排
+                    </Msg>
                 </div>
             </div>
         );

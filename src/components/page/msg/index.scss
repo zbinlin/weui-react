@@ -1,0 +1,54 @@
+@import "../../../base/page";
+
+.root {
+    text-align: center;
+    height: 100%;
+    min-height: 100vh;
+    max-height: 100vh;
+}
+.content {
+    box-sizing: border-box;
+    padding-top: $msg-padding-top;
+    height: 100%;
+    min-height: 100vh;
+    max-height: 100vh;
+    overflow: hidden;
+}
+
+.icon {
+    margin-bottom: $msg-icon-gap;
+}
+
+.msg {
+    margin-bottom: $msg-text-gap;
+    padding: 0 20px;
+    font-size: 14px;
+    color: $global-text-color;
+
+    > h2 {
+        margin-bottom: $msg-title-gap;
+        font-weight: 400;
+        font-size: 20px;
+        color: black;
+    }
+
+    > p {
+        margin: 0;
+    }
+}
+
+.action {
+    margin-bottom: $msg-opr-gap;
+}
+
+.more {
+    margin-bottom: $msg-extra-area-gap;
+    line-height: 1.6;
+    font-size: 14px;
+    margin-top: -(14px * 1.6 + $msg-extra-area-gap);
+
+    > a {
+        color: $global-link-color;
+        text-decoration: none;
+    }
+}
