@@ -30,3 +30,5 @@ export {
     WarningButton,
     DefaultButton
 };
+
+export { default as ButtonGroup } from "./group";

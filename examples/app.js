@@ -3,7 +3,7 @@
 import React, { Component } from "react";
 
 import {
-    Button, PrimaryButton, WarningButton, DefaultButton,
+    Button, PrimaryButton, WarningButton, DefaultButton, ButtonGroup,
     Icon,
     Progress,
     Cells, Cell, Link, Radio, Checkbox, Switch, Select, Input, Textarea,
@@ -106,11 +106,11 @@ export default class App extends Component {
             <div>
                 <Button>按钮</Button>
                 <hr />
-                <Button is="primary-btn">按钮</Button>
-                <hr />
-                <Button is="warning-btn">按钮</Button>
-                <hr />
-                <Button is="default-btn">按钮</Button>
+                <ButtonGroup>
+                    <Button is="primary-btn">按钮</Button>
+                    <Button is="warning-btn">按钮</Button>
+                    <Button is="default-btn">按钮</Button>
+                </ButtonGroup>
                 <hr />
                 <PrimaryButton>按钮</PrimaryButton>
                 <hr />
