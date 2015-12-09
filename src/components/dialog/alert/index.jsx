@@ -9,15 +9,14 @@ import styles from "./index.scss";
 const cx = classNames.bind(styles);
 
 export default class Alert extends Component {
-    clickHandle() {
-        if (typeof this.props.callback === "function") {
-            this.props.callback(this.alert.bind(this));
+    onConfirm() {
+        if (typeof this.props.onConfirm === "function") {
+            this.props.onConfirm(() => {
+                return new Promise(resolve => {
+                    resolve();
+                });
+            });
         }
-    }
-    alert() {
-        return new Promise(resolve => {
-            resolve();
-        });
     }
     render() {
         let props = this.props;
@@ -31,7 +30,7 @@ export default class Alert extends Component {
                         {props.children}
                     </div>
                     <footer className={cx("footer")}>
-                        <button onClick={this.clickHandle.bind(this)}>确定</button>
+                        <button onClick={this.onConfirm.bind(this)}>确定</button>
                     </footer>
                 </div>
             </Dialog>

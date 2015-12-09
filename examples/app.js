@@ -241,7 +241,7 @@ export default class App extends Component {
                     <div>Alert</div>
                     <Button onClick={this.alert.bind(this)}>点击</Button>
                     <Alert title="This is an alert example"
-                           callback={this.alertCallBack.bind(this)}
+                           onConfirm={this.alertCallBack.bind(this)}
                            open={this.state.alert}>
                         Hello World!
                     </Alert>
