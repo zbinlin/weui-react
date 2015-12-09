@@ -191,7 +191,7 @@ export default class App extends Component {
                     <br />
                     <Progress value={120} max={150} />
                     <br />
-                    <Progress value={120} max={150} onCancel={() => { alert("cancel"); this.setState({ canceled: true }); }} canceled={this.state.canceled} />
+                    <Progress value={120} max={150} onCancel={done => { done().then(() => {alert("cancel"); this.setState({ canceled: true }); }); }} canceled={this.state.canceled} />
                 </div>
                 <hr />
                 <div>

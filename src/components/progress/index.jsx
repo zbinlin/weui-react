@@ -9,6 +9,13 @@ const cx = classNames.bind(styles);
 import Icon from "../icon";
 
 class Progress extends Component {
+    onCancel() {
+        this.props.onCancel(() => {
+            return new Promise(resolve => {
+                resolve();
+            });
+        });
+    }
     render() {
         let props = this.props;
         let isIndeterminate = (() => {
@@ -49,7 +56,7 @@ class Progress extends Component {
             if (isCancelable) {
                 return (
                     <div className={cx("progress-cancel")}>
-                        <a onClick={props.onCancel}>
+                        <a onClick={this.onCancel.bind(this)}>
                             <Icon type="cancel" className={cx("cancel")} />
                         </a>
                     </div>
