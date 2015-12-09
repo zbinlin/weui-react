@@ -18,7 +18,7 @@ $outline-active-bg-color: $btn-warning-outline-active-bg-color;
 $outline-disabled-font-color: $btn-warning-outline-disabled-font-color;
 $outline-disabled-bg-color: $btn-warning-outline-disabled-bg-color;
 
-@import "./mixin.scss";
+@import "./mixin";
 @include theme(
     $font-color,
     $bg-color,
