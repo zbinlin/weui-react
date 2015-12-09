@@ -42,12 +42,12 @@ export default class App extends Component {
             confirm: true
         });
     }
-    confirmCallback(done) {
-        done().then(confirm => {
+    confirmCallback(action, done) {
+        done().then(() => {
             this.setState({
                 confirm: false
             });
-            alert(confirm);
+            alert(action);
         });
     }
     showToast() {
@@ -251,7 +251,8 @@ export default class App extends Component {
                     <div>Confirm</div>
                     <Button onClick={this.confirm.bind(this)}>点击</Button>
                     <Confirm title="This is a confirm example"
-                             callback={this.confirmCallback.bind(this)}
+                             onConfirm={this.confirmCallback.bind(this, "confirm")}
+                             onCancel={this.confirmCallback.bind(this, "cancel")}
                              open={this.state.confirm}>
                         <div>自定义弹窗内容</div>
                         <div>...</div>

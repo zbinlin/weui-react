@@ -9,15 +9,23 @@ import styles from "./index.scss";
 const cx = classNames.bind(styles);
 
 export default class Confirm extends Component {
-    onClick(confirm) {
-        if (typeof this.props.callback === "function") {
-            this.props.callback(this.confirm.bind(this, confirm));
+    onConfirm() {
+        if (typeof this.props.onConfirm === "function") {
+            this.props.onConfirm(() => {
+                return new Promise(resolve => {
+                    resolve();
+                });
+            });
         }
     }
-    confirm(rst) {
-        return new Promise(resolve => {
-            resolve(!!rst);
-        });
+    onCancel() {
+        if (typeof this.props.onCancel === "function") {
+            this.props.onCancel(() => {
+                return new Promise(resolve => {
+                    resolve();
+                });
+            });
+        }
     }
     render() {
         let props = this.props;
@@ -32,9 +40,9 @@ export default class Confirm extends Component {
                     </div>
                     <footer className={cx("footer")}>
                         <button className={cx("btn-default")}
-                                onClick={this.onClick.bind(this, false)}>取消</button>
+                                onClick={this.onCancel.bind(this)}>取消</button>
                         <button className={cx("btn-primary")}
-                                onClick={this.onClick.bind(this, true)}>确定</button>
+                                onClick={this.onConfirm.bind(this)}>确定</button>
                     </footer>
                 </div>
             </Dialog>
