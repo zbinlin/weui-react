@@ -31,6 +31,9 @@
         border-radius: $btn-border-radius * 2;
     }
 }
+.btn + .btn {
+    margin-top: $btn-default-gap;
+}
 
 .disabled {
     cursor: not-allowed;
