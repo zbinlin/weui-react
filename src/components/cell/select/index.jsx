@@ -10,7 +10,10 @@ const cx = classNames.bind(styles);
 class Select extends Component {
     render() {
         let props = this.props;
-        let header = <div className={cx("header")}>{props.label || props.children}</div>;
+        let header = props.label || props.children;
+        if (header) {
+            header = <div className={cx("header")}>{header}</div>;
+        }
         let options = props.options.map(opt => {
             if (Array.isArray(opt)) {
                 return [...opt];
@@ -26,7 +29,7 @@ class Select extends Component {
                 return props.defaultValue;
             }
             let selectedIndex = props.hasOwnProperty("selectedIndex") ?
-                props.selectedIndex : options.find(opt => !!opt[2]);
+                props.selectedIndex : options.findIndex(opt => !!opt[2]);
             return (options[selectedIndex] || [])[1];
         })();
         return (

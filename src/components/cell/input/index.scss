@@ -20,6 +20,12 @@
         min-width: 3em;
         padding-right: 0.3em;
     }
+
+    /* For Select Component */
+    select {
+        padding-left: 0;
+        width: auto;
+    }
 }
 
 .body {

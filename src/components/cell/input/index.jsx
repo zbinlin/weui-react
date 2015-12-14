@@ -14,7 +14,9 @@ class Input extends Component {
         let props = this.props;
 
         let header = (() => {
-            let label = props.label ? props.label : props.children ? props.children : "";
+            let label = props.label ? props.label :
+                        props.header ? props.header :
+                        props.children ? props.children : "";
             if (!label) return;
             if (typeof label === "string") {
                 label = <label for={props.id}>{label}</label>;
