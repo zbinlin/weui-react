@@ -14,10 +14,11 @@ export default class Cells extends Component {
         if (title) {
             title = <div className={cx("title")}>{title}</div>;
         }
+        let style = props.style;
         return (
             <div className={cx("root")}>
                 {title}
-                <div className={cx("content")}>
+                <div className={cx("content")} style={style}>
                     {props.children}
                 </div>
             </div>
