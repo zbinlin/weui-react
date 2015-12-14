@@ -19,7 +19,7 @@ class Radio extends Component {
         return (
             <div className={cx("root", "padding", props.disabled ? "disabled" : "")}>
                 {header}
-                <div className={cx("body")}>{props.children}</div>
+                <div className={cx("body")}>{props.label || props.children}</div>
                 <div className={cx("footer")}>
                     <input id={props.id} className={cx("radio")} type="radio"
                            name={props.name}

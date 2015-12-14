@@ -10,7 +10,7 @@ const cx = classNames.bind(styles);
 class Select extends Component {
     render() {
         let props = this.props;
-        let header = <div className={cx("header")}>{props.children}</div>;
+        let header = <div className={cx("header")}>{props.label || props.children}</div>;
         let options = props.options.map(opt => {
             if (Array.isArray(opt)) {
                 return [...opt];

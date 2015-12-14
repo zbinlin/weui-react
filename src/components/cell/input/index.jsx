@@ -14,24 +14,26 @@ class Input extends Component {
         let props = this.props;
 
         let header = (() => {
-            if (!props.hasOwnProperty("children")) return;
-            let label = typeof props.children === "string" ?
-                <label for={props.id}>{props.children}</label> : props.children;
+            let label = props.label ? props.label : props.children ? props.children : "";
+            if (!label) return;
+            if (typeof label === "string") {
+                label = <label for={props.id}>{label}</label>;
+            }
             return <div className={cx("header")}>{label}</div>;
         })();
 
         // valid: [ "true", "false", "none" ]
         let icon = ((valid) => {
-            const blank = <Icon type="blank" size={16} />;
+            const blank = <Icon type="blank" size={23} />;
             if (valid === void 0) {
                 return blank;
             }
             valid += "";
             switch (valid.toLowerCase()) {
                 case "true":
-                    return <Icon type="success-no-circle" size={16} />;
+                    return <Icon type="success-no-circle" size={23} />;
                 case "false":
-                    return <Icon type="warning" size={16} />;
+                    return <Icon type="warning" size={23} />;
                 case "none":
                 default:
                     return blank;
@@ -52,6 +54,7 @@ class Input extends Component {
                                onChange={props.onChange}
                                defaultValue={props.defaultValue}
                                value={props.value}
+                               placeholder={props.placeholder}
                                disabled={props.disabled} />
                     </div>
                 </div>

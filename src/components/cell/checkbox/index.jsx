@@ -34,7 +34,7 @@ class Checkbox extends Component {
                         <Icon type="success" size={23} />
                     </span>
                 </div>
-                <div className={cx("body")}>{props.children}</div>
+                <div className={cx("body")}>{props.label || props.children}</div>
                 {footer}
             </div>
         );
