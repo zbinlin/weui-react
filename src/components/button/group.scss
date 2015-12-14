@@ -1,5 +1,10 @@
 @import "../../base/btn";
 
-.group {
+.root {
     margin: $cell-margin-top $btn-default-gap 0.3em;
+}
+
+.justify {
+    display: flex;
+    justify-content: space-between;
 }

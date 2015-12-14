@@ -31,7 +31,7 @@
         border-radius: $btn-border-radius * 2;
     }
 }
-.btn + .btn {
+.btn:not(.small-btn) + .btn:not(.small-btn) {
     margin-top: $btn-default-gap;
 }
 
@@ -44,4 +44,5 @@
     font-size: $btn-small-font-size;
     padding: 0 0.75em;
     display: inline-block;
+    margin: 0;
 }
