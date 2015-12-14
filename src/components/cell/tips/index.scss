@@ -1,0 +1,9 @@
+@import "../../../base/cell.scss";
+
+.root {
+    margin-top: 0.3em;
+    color: $global-text-color;
+    padding-left: $cell-horizontal-gap;
+    padding-right: $cell-horizontal-gap;
+    font-size: $cell-tips-font-size;
+}
