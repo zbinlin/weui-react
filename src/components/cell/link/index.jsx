@@ -16,7 +16,7 @@ export default class Link extends Component {
         }
         let footer = props.footer;
         return (
-            <a className={cx("root")} href={props.href}>
+            <a className={cx("root")} href={props.href} onClick={props.onClick}>
                 {header}
                 <div className={cx("body")}>{props.children}</div>
                 <div className={cx("footer")}>{footer}</div>
