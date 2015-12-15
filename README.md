@@ -10,7 +10,7 @@
 ## Usage
 
 ```
-npm install --save weui-react
+npm install --save weui-react-component
 ```
 
 ## Components

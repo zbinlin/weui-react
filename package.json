@@ -1,5 +1,5 @@
 {
-  "name": "weui-react",
+  "name": "weui-react-component",
   "version": "1.0.3",
   "description": "",
   "main": "./lib/index.js",
@@ -13,7 +13,7 @@
     "deploy": "NODE_ENV=production npm run build-lib && npm run build-example",
     "serve": "babel-node ./tools/serve.js"
   },
-  "keywords": [],
+  "keywords": ["weui", "react", "react-component"],
   "author": "",
   "license": "MIT",
   "devDependencies": {
