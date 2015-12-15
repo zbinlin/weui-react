@@ -1,7 +1,7 @@
 "use strict";
 
 import webpack from "webpack";
-import config from "./webpack.config.dev";
+import config from "./webpack.config.prod";
 
 export default async function __webpack__() {
     return new Promise((resolve, reject) => {

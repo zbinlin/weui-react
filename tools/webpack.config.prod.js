@@ -7,12 +7,12 @@ const PWD = path.join(__dirname, "..");
 
 export default {
     entry: [
-        path.join(PWD, "./src/index.js")
+        path.join(PWD, "./examples/bootstrap.js")
     ],
     output: {
-        path: path.join(PWD, "./lib"),
+        path: path.join(PWD, "./dist"),
         publicPath: "/",
-        filename: "index.js"
+        filename: "bundle.js"
     },
     module: {
         loaders: [
@@ -24,7 +24,7 @@ export default {
             {
                 test: /\.(s[ac]|c)ss$/,
                 exclude: /node_modules|dist/,
-                loaders: ["style", "css?modules&-autoprefixer", "sass"]
+                loaders: ["style", "css?modules&-autoprefixer&localIdentName=[path][name]--[local]--[hash:base64:5]&sourceMap"]
             }
         ]
     },
