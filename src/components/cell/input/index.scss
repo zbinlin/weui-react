@@ -36,6 +36,10 @@
     composes: footer from "../base.scss";
     line-height: 0;
 }
+.footer > * {
+    display: inline-block;
+    vertical-align: middle;
+}
 
 
 .input-container {
