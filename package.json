@@ -1,7 +1,7 @@
 {
   "name": "weui-react-component",
   "version": "1.0.3",
-  "description": "",
+  "description": "WeUI - React Component",
   "main": "./lib/index.js",
   "scripts": {
     "test": "jest",
@@ -13,8 +13,12 @@
     "deploy": "NODE_ENV=production npm run build-lib && npm run build-example",
     "serve": "babel-node ./tools/serve.js"
   },
-  "keywords": ["weui", "react", "react-component"],
-  "author": "",
+  "keywords": [
+    "weui",
+    "react",
+    "react-component"
+  ],
+  "author": "zbinlin",
   "license": "MIT",
   "devDependencies": {
     "autoprefixer": "^6.1.1",
@@ -71,5 +75,16 @@
   },
   "dependencies": {
     "classnames": "^2.2.0"
-  }
+  },
+  "directories": {
+    "example": "examples"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zbinlin/weui-react.git"
+  },
+  "bugs": {
+    "url": "https://github.com/zbinlin/weui-react/issues"
+  },
+  "homepage": "https://github.com/zbinlin/weui-react#readme"
 }
