@@ -65,10 +65,11 @@ doc coming soon...
 ## Develop
 
 ``` bash
-git clone https://github.com/zbinlin/weui-react`
+git clone https://github.com/zbinlin/weui-react
 cd weui-react
 npm install
-npm run build-lib && npm run serve
+npm run build-lib && npm run build-watch &
+npm run serve
 ```
 
 ### Notes

@@ -17,6 +17,9 @@ let server = new webpackDevServer(compiler, {
     contentBase: "./dist/",
     watchOptions: {
         aggregateTimeout: 300
-    }
+    },
+    stats: {
+        colors: true,
+    },
 });
 server.listen(PORT);
