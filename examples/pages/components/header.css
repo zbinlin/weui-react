@@ -1,0 +1,17 @@
+.root {
+    padding: 2em 0;
+    text-align: center;
+    color: #888;
+    font-size: 16px;
+}
+.root p {
+    font-size: 14px;
+    margin: 0;
+}
+
+.title {
+    font-size: 34px;
+    color: #3CC51F;
+    font-weight: 400;
+    margin: 0 15%;
+}

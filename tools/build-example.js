@@ -10,7 +10,7 @@ import webpack from "./webpack.js";
 async function buildExample() {
     try {
         await run("Clean dist/", clean, "dist/**/*");
-        await run("Copy", copy, "examples/index.html", "dist/", "examples");
+        await run("Copy", copy, "examples/{images/*,index.html}", "dist/", "examples");
         await run("webpack", webpack);
     } catch (ex) {
         console.error(ex);
