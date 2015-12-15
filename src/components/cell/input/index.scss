@@ -66,12 +66,18 @@
 }
 
 .input-icon {
-}
-.input-icon:only-child::after {
-    content: "";
-    display: inline-block;
-    height: 0;
-    line-height: 0;
-    vertical-align: top;
-    margin-right: $cell-horizontal-gap;
+    margin-right: 5px;
+
+    &:only-child {
+        margin-right: 0;
+
+        &::after {
+            content: "";
+            display: inline-block;
+            height: 0;
+            line-height: 0;
+            vertical-align: top;
+            margin-right: $cell-horizontal-gap;
+        }
+    }
 }

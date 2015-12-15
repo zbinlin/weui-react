@@ -24,19 +24,20 @@
 
 
 .select-container {
-    position: relative;
     width: 100%;
     height: 44px;
-}
-.select-container::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    right: $cell-horizontal-gap;
-    bottom: 0;
-    @include wap-arrow-right;
-    margin-top: auto;
-    margin-bottom: auto;
+
+    position: relative;
+    &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: $cell-horizontal-gap;
+        bottom: 0;
+        @include wap-arrow-right;
+        margin-top: auto;
+        margin-bottom: auto;
+    }
 }
 
 .select {

@@ -30,6 +30,7 @@
 }
 
 .footer {
+    height: 42px;
     line-height: 42px;
     margin-top: 20px;
     font-size: 17px;
@@ -43,6 +44,7 @@
         border: 0;
         background: none;
         width: 100%;
+        height: 100%;
         @include tap-color;
         &:active {
             background: $dialog-line-color;

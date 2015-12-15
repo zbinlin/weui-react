@@ -29,7 +29,7 @@ class Select extends Component {
                 return props.defaultValue;
             }
             let selectedIndex = props.hasOwnProperty("selectedIndex") ?
-                props.selectedIndex : options.findIndex(opt => !!opt[2]);
+                props.selectedIndex : options.map(opt => !!opt[2]).indexOf(true);
             return (options[selectedIndex] || [])[1];
         })();
         return (
