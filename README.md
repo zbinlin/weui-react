@@ -1,4 +1,66 @@
-**开发中**
+# WeUI React Component
+
+**非官方**
+
+![https://live-demo.github.io/weui-react/index.html](https://live-demo.github.io/weui-react/qrcode.png)
+
+<https://live-demo.github.io/weui-react/qrcode.png>
+
+
+## Usage
+
+```
+npm install --save weui-react
+```
+
+## Components
+
+### Button
+
+properties:
+* **themes**: primary-btn warning-btn default-btn | (outline)
+* **sizes**: medium(default) small
+* **states**: disabled
+
+### Cell
+
+doc coming soon...
+
+
+### Toast
+
+doc coming soon...
+
+
+### Dialog
+
+doc coming soon...
+
+
+### Progress
+
+doc coming soon...
+
+
+### Msg Page
+
+doc coming soon...
+
+
+### Article
+
+doc coming soon...
+
+
+### ActionSheet
+
+doc coming soon...
+
+
+### Icons
+
+doc coming soon...
+
 
 ## Develop
 
@@ -9,18 +71,7 @@ npm install
 npm run build-lib && npm run serve
 ```
 
-
-## Components
-
-### Button
-
-properties:
-* **themes**: primary-btn warning-btn default-btn | (outline)
-* **sizes**: medium small
-* **states**: disabled
-
-
-## 疑难杂症
+### Notes
 
 * jest 里需要测试的组件需要以 require 来引入，不能使用 import
 
