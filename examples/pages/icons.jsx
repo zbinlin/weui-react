@@ -21,7 +21,7 @@ export default class IconsPage extends Component {
                     <Icon size="large" type="safe-success" />
                     <Icon size="large" type="safe-warning" />
                 </div>
-                <div style={{width: "90%", margin: "1em auto"}}>
+                <div style={{width: "90%", margin: "1em auto", textAlign: "center"}}>
                     <Icon type="success" />
                     <Icon type="success-circle" />
                     <Icon type="success-no-circle" />

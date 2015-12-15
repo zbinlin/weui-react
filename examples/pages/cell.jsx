@@ -66,18 +66,18 @@ export default class CellPage extends Component {
                     <Switch>标题文字</Switch>
                     <Switch defaultChecked>默认：开</Switch>
                 </Cells>
-                <Cells title="表单">
-                    <form>
+                <form>
+                    <Cells title="表单">
                         <Input label="qq" placeholder="请输入qq号" />
                         <Input label="验证码" placeholder="请输入验证码" footer={vcode} />
                         <Input label="银行卡" placeholder="请输入银行卡号" />
                         <Input label="验证码" placeholder="请输入验证码" footer={vcode} valid={false} />
-                        <Tips>底部说明文字底部说明文字</Tips>
-                        <ButtonGroup>
-                            <PrimaryButton>确定</PrimaryButton>
-                        </ButtonGroup>
-                    </form>
-                </Cells>
+                    </Cells>
+                    <Tips>底部说明文字底部说明文字</Tips>
+                    <ButtonGroup>
+                        <PrimaryButton>确定</PrimaryButton>
+                    </ButtonGroup>
+                </form>
                 <Cells title="文本域">
                     <Textarea placeholder="请输入评论" />
                 </Cells>
