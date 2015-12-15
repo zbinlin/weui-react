@@ -31,6 +31,7 @@ export default class Dialog extends Component {
     }
     componentWillUnmount() {
         let hostEl = this.hostEl;
+        if (!hostEl) return;
         this.hostEl = null;
         ReactDOM.unmountComponentAtNode(hostEl);
         document.body.removeChild(hostEl);
