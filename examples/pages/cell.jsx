@@ -4,7 +4,7 @@ import React, { Component } from "react";
 
 import Page, { Header } from "./base";
 import {
-    Cells,
+    Cells, CellGroup,
     Cell,
     Link,
     Radio,
@@ -91,11 +91,11 @@ export default class CellPage extends Component {
                         <Select options={[["+86", 86], ["+01", 1]]} />}
                         placeholder="请输入号码" type="tel" />
                 </Cells>
-                <Cells title="选择">
+                <CellGroup title="选择">
                     <Select options={[["微信号", "wechat"], ["QQ号", "qq"], ["email"]]} />
                     <Select label="国家/地区"
                             options={[["中国"], ["美国"], ["英国"]]} />
-                </Cells>
+                </CellGroup>
             </Page>
         );
     }

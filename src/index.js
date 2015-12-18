@@ -26,7 +26,7 @@ export {
 
 
 export {
-    Cells,
+    Cells, CellGroup,
     Cell,
     Link,
     Radio,

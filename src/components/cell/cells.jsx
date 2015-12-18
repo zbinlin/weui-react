@@ -26,3 +26,7 @@ export default class Cells extends Component {
 
     }
 }
+
+export {
+    Cells as CellGroup,
+};
