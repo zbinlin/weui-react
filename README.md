@@ -49,16 +49,11 @@ DefaultButton（default-btn），可以通过两种方式引入：
  ...
  ```
 
-支持属性：
-
-* `outline`
-
- 设置该属性后，其背景颜色将变成透明
-* `size`
-
+**props:**
+* `outline`: {boolean} - 设置该属性后，其背景颜色将变成透明
+* `size`: {string}
   - `small` - 小按钮（inline-block）
-
-* `disabled` - 设置该属性后，其按钮变灰
+* `disabled`: {boolean} - 设置该属性后，其按钮变灰
 
 
 ### Cell
@@ -91,10 +86,10 @@ import { Cell } from "weui-react-component";
 ...
 <Cell>这是一个说明</Cell>
 ```
+**props:**
 
-* `header`
-
-* `footer`
+* `header`: {string | ReactElement}
+* `footer`: {string | ReactElement}
 
 
 #### Link 组件
@@ -108,9 +103,9 @@ import { Link } from "weui-react-component";
 ```
 like as `<a href="...">这是一个链接</a>`
 
-* `header`
+* `header`: {string | ReactElement}
 
-* `footer`
+* `footer`: {string | ReactElement}
 
 
 #### Input 组件
@@ -124,7 +119,9 @@ import { Input } from "weui-react-component";
 ```
 like as `<label>Description</label><input type="text">`
 
-* `label`
+**props:**
+
+* `label`: {string}
 
 
 #### Checkbox 组件
@@ -138,11 +135,11 @@ import { Checkbox } from "weui-react-component";
 ```
 like as `<label>Description></label><input type="checkbox">`
 
-* `label`
+**props:**
 
-* `checked`
-
-* `defaultChecked`
+* `label`: {string}
+* `checked`: {boolean}
+* `defaultChecked`: {boolean}
 
 #### Radio 组件
 
@@ -175,9 +172,10 @@ like as
 </select>
 ```
 
-* `header`
+**props**
 
-* `label`
+* `header`: {string | ReactElement}
+* `label`: {string}
 
 
 #### Switch 组件
@@ -190,9 +188,10 @@ import { Switch } from "weui-react-component";
 ...
 ```
 
-* `checked`
+**props:**
 
-* `defaultChecked`
+* `checked`: {boolean}
+* `defaultChecked`: {boolean}
 
 
 #### Textarea 组件
@@ -205,7 +204,9 @@ import { Textarea } from "weui-react-component";
 ...
 ```
 
-* `value`
+**props:**
+
+* `value`: {string}
 
 
 
@@ -231,7 +232,9 @@ import { Toast } from "weui-react-component";
 <Toast icon={...}>已完成</Toast>
 ```
 
-* `open`
+**props:**
+
+* `open`: {boolean}
 
 
 #### Loading 组件
@@ -244,7 +247,9 @@ import { Loading } from "weui-react-component";
 ...
 ```
 
-* `open`
+**props:**
+
+* `open`: {boolean}
 
 
 ### Dialog
@@ -259,11 +264,11 @@ import { Alert } from "weui-react-component";
 ...
 ```
 
-* `title`
+**props:**
 
-* `open`
-
-* `onConfirm`
+* `title`: {string}
+* `open`: {boolean}
+* `onConfirm`: {Function}
 
 
 
@@ -276,13 +281,13 @@ import { Confirm } from "weui-react-component";
 <Confirm title="这是标题" onConfirm={...} onCancel={...}>内容...</Confirm>
 ...
 ```
-* `title`
 
-* `open`
+**props**
 
-* `onConfirm`
-
-* `onCancel`
+* `title`: {string}
+* `open`: {boolean}
+* `onConfirm`: {Function}
+* `onCancel`: {Function}
 
 
 ### Progress
@@ -295,13 +300,12 @@ import { Progress } from "weui-react-component";
 ...
 ```
 
-* `value`
+**props:**
 
-* `max`
-
-* `onCancel`
-
-* `canceled`
+* `value`: {number}
+* `max`: {number}
+* `onCancel`: {Function}
+* `canceled`: {boolean}
 
 
 ### Msg Page
@@ -318,15 +322,13 @@ import { Msg } from "weui-react-component";
 ...
 ```
 
-* `title`
+**props:**
 
-* `icon`
-
-* `more`
-
-* `onConfirm`
-
-* `onCancel`
+* `title`: {string}
+* `icon`: {ReactElement}
+* `more`: {string} - URL
+* `onConfirm`: {Function}
+* `onCancel`: {Function}
 
 
 ### Article
@@ -359,36 +361,30 @@ import { ActionSheet } from "weui-react-component";
 ...
 ```
 
-属性：
+**props:**
 
 * `items`: {string[]}
+* `onClick`: {`(() => Promise<any>, () => Promise) => void`}
 
-* `onClick`: {(): (() => Promise<any>, () => Promise)}
+  ```js
+  onClick = function (getValue, cleanup) {
+     getValue().then(function (val) {
+         // val
+         return cleanup();
+     }).then(function () {
+         // done
+     });
+  }
+  ```
+* `onCancel`: {`(() => Promise) => void`}
 
- 有两个参数，两个参数都是返回 Promise 的函数，
-
- ```js
- onClick = function (getValue, cleanup) {
-    getValue().then(function (val) {
-        // val
-        return cleanup();
-    }).then(function () {
-        // done
-    });
- }
- ```
-
-* `onCancel`: {(): () => Promise}
-
- 有一个参数
-
- ```js
- onCancel = function (cleanup) {
-    cleanup().then(function () {
-        // done
-    });
- }
- ```
+  ```js
+  onCancel = function (cleanup) {
+     cleanup().then(function () {
+         // done
+     });
+  }
+  ```
 
 ### Icons
 
@@ -400,10 +396,10 @@ import { Icon } from "weui-react-component";
 ...
 ```
 
-属性：
+**props:**
 
-* `type`: { blank, circle, download, info, safe-success, safe-warning,
- success, success-circle, success-no-circle, waiting, info-circle, cancle }
+* `type`: {string} - one of (blank, circle, download, info, safe-success, safe-warning,
+ success, success-circle, success-no-circle, waiting, info-circle, cancle)
 
 
 ## Develop
