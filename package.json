@@ -1,6 +1,6 @@
 {
   "name": "weui-react-component",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "WeUI - React Component",
   "main": "./lib/index.js",
   "scripts": {
